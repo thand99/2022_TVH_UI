@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "about", component:AboutComponent},
   {path: "rewards", component:RewardsComponent},
   {path: "gallery", component:GalleryComponent},
+  {path: "registration-form", component:RegistrationFormComponent},
 
 ];
 

@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutComponent,
     HomeComponent,
     RewardsComponent,
-    GalleryComponent
+    GalleryComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
