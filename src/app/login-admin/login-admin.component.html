@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Form Page</title>
+</head>
+<body>
+   
+    <div class="loginbox">
+  
+        <img src="../assets/pic.png" class="pic">
+        <h1>Login Here</h1>
+        <form>
+            <p>Full Names</p>
+            <input type="text" name ="" placeholder="Enter your full names" [(ngModel)]="names" id="names" name="string"> 
+            <p>Email</p>
+            <input type="text" name ="" placeholder="Enter your email" [(ngModel)]="email" id="email" name="string">
+            <p>Password</p>
+            <input type="password" name ="" placeholder="Enter your password" [(ngModel)]="password" id="email" name="string">
+            <input type="submit" (click)="clickhandle()" name="" value="Login">
+        
+
+        </form>
+    </div>
+     
+    
+</body>
+</html>
