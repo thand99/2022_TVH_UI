@@ -29,7 +29,7 @@ export class LoginAdminComponent implements OnInit {
 
       if(res.message =="login Successful")
       {
-        alert(res.message);
+        
           this.route.navigate(["admin"])
       }
       else{
