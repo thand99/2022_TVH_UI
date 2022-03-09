@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,14 +20,18 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     HomeComponent,
     RewardsComponent,
     GalleryComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
