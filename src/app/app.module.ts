@@ -10,6 +10,11 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
