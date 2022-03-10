@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding: 2% 8%;
   align-items: center;
-  background: rgb(0, 0, 0);
+  background: #fff;
   height: 50px;
 }
 nav img{
@@ -27,7 +27,7 @@ nav img{
 }
 .nav-links ul li a{
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 15px;
   padding-left: 5px;
   padding-top: 2px;
@@ -171,7 +171,7 @@ nav img{
   font-size: 16px;
 }
 .footer{
-  background-color: #a09e9ec7;
+  background-color: #fff;
   height: 250px;
 }
 .teams-form h1{
@@ -202,7 +202,7 @@ nav img{
 }
 
 footer p{
-  color: #fff;
+  color: #000;
   text-align: center;
   padding-top: 35px;
 }
@@ -226,7 +226,7 @@ footer p{
 }
 .nav-bars ul li a{
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 15px;
   padding-left: 5px;
   padding-top: 2px;
@@ -239,7 +239,7 @@ footer p{
   transition: 1s;
 }
 .footer p{
-  color: #fff;
+  color: #000;
   text-align: center;
   margin-top: 5px;
 }
