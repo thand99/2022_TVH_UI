@@ -19,56 +19,56 @@
                     <p>Gender</p>
                     <br>
                     <select class="the-gender">
-                        <option value="choose">Choose Option</option>
-                        <option value="male">Male</option>
-                        <option value="male">Female</option>
+                        <option value[(ngModel)]>Choose Option</option>
+                        <option value[(ngModel)]></option>
+                        <option value[(ngModel)]>Female</option>
                     </select>
                     <p>Date Of Birth</p>
-                    <input type="date" class="date" placeholder="Enter your date of birth">
+                    <input type="date" class="date" placehold[(ngModel)]="Enter your date of birth">
                 </div>
                 <p>Student Mail</p>
-                <input type="text" class="email" placeholder="Enter your student email">
+                <input type="text" class="email" placehold[(ngModel)]="Enter your student email">
                 <p>Institution</p>
                 <br>
                 <select class="your-insti">
-                    <option value="choose">Choose Option</option>
-                    <option value="tut">Tshwane University Of Technology</option>
-                    <option value="up">University Pretoria</option>
-                    <option value="smu">Sefako Makgatho University</option>
-                    <option value="unisa">Unisa</option>
+                    <option value[(ngModel)]>Choose Option</option>
+                    <option value[(ngModel)]>Tshwane University Of Technology</option>
+                    <option value[(ngModel)]>University Pretoria</option>
+                    <option value[(ngModel)]>Sefako Makgatho University</option>
+                    <option value[(ngModel)]>Unisa</option>
 
                 </select>
                 <p>Recent Proof Of Registration</p>
                 <input type="file" class="browser" >
                 <p>Mobile Number</p>
-                <input type="text" class="number" placeholder="Enter your cellphone number">
+                <input type="text" class="number" placeholdervalue[(ngModel)]="Enter your cellphone number">
                 <p>Programming Skills?</p>
                 <br>
                 <select class="your-insti">
-                    <option value="choose">Choose Option</option>
-                    <option value="male">Yes</option>
-                    <option value="male">No</option>
+                    <option value[(ngModel)]="choose">Choose Option</option>
+                    <option value[(ngModel)]>Yes</option>
+                    <option value[(ngModel)]>No</option>
 
 
                 </select>
                 <p>Status</p>
                 <br>
                 <select class="status">
-                    <option value="choose">Choose Option</option>
-                    <option value="team">Team</option>
-                    <option value="male">Individual</option>
+                    <option value[(ngModel)]>Choose Option</option>
+                    <option value[(ngModel)]>Team</option>
+                    <option value[(ngModel)]>Individual</option>
                 </select>
                 <p>How Did you Hear About Us?</p>
                 <br>
                 <select class="about-us">
-                    <option value="choose">Choose Option</option>
-                    <option value="friends">Friends</option>
-                    <option value="male">Tshwane University Of Technology</option>
-                    <option value="male">Other Sites</option>
-                    <option value="male">Social Media</option>
+                    <option value[(ngModel)]>Choose Option</option>
+                    <option value[(ngModel)]>Friends</option>
+                    <option value[(ngModel)]>Tshwane University Of Technology</option>
+                    <option value[(ngModel)]>Other Sites</option>
+                    <option value[(ngModel)]>Social Media</option>
                 </select>
 
-                <input type="submit" value="Submit">
+                <input type="submit" (click)="clickhandle()" value="Submit">
 
             </form>
         </div>
