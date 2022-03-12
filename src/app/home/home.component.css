@@ -11,7 +11,7 @@
   height: 50px;
 }
 nav img{
-  width: 80px;
+  width: 70px;
   margin-left: -90px;
   filter: brightness(110%);
 }
@@ -34,7 +34,7 @@ nav img{
   padding-right: 5px;
 }
 .nav-links ul li a:hover{
-  color: #0121d6;
+  color: #bebebe;
   font-size: 15px;
   transition: 1s;
 }
@@ -202,7 +202,7 @@ footer p{
 #tvh-sec{
 
   margin-bottom: 30px;
-  background-color: #1100ff;
+  background-color: #001588;
   height: 250px;
 
 }
@@ -273,7 +273,7 @@ footer p{
   padding-right: 5px;
 }
 .nav-bars ul li a:hover{
-  color: #0121d6;
+  color: #bebebe;
   font-size: 15px;
   transition: 1s;
 }

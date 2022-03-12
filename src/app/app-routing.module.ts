@@ -6,6 +6,7 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: "gallery", component:GalleryComponent},
   {path: "registration-form", component:RegistrationFormComponent},
   {path: "login-form", component:LoginFormComponent},
+  {path: "admin", component:AdminComponent},
 
 ];
 
