@@ -8,13 +8,14 @@
   justify-content: space-between;
   padding: 2% 8%;
   align-items: center;
-  background: rgb(0, 0, 0);
+  background: #0121d6;
   height: 50px;
 }
-nav img{
+.menu img{
   width: 70px;
-  margin-left: -90px;
-  filter: brightness(110%);
+  position: absolute;
+  top: 20%;
+  right: 30%;
 }
 .nav-links{
   flex:1;
@@ -35,14 +36,14 @@ nav img{
   padding-right: 5px;
 }
 .nav-links ul li a:hover{
-  color: #0121d6;
+  color: #bebebe;
   font-size: 15px;
   transition: 1s;
 }
 .container{
   height: 105vh;
   width: 100%;
-  background-color: #222222;
+  background-color: #fff;
   background-position: center;
   background-size: cover;
 }
@@ -66,31 +67,30 @@ nav img{
   font-size: 55px;
   font-weight: bold;
   position: absolute;
-  top: 65%;
-  left: 9%;
+  top: 40%;
+  left: 6%;
 }
 .para-word{
   color: #c2b116;
   font-size: 20px;
   position: absolute;
-  top: 75%;
-  left: 10%;
+  top: 45%;
+  left: 6%;
 }
 .para-word p{
 
   text-align: center;
 }
 .def-word{
- color: #fff;
+ color: #000;
  font-size: 50px;
  font-weight: bold;
  position: absolute;
- margin-top: 25px;
+ margin-top: 160px;
  right: 20%;
 }
 .tshwane-var{
 
-  background: #ff0000;
   border-radius: 30px;
   margin-top: 80px;
   width: 40%;
@@ -103,7 +103,7 @@ nav img{
 }
 .tshwane-v{
 
-  color: #fff;
+  color: #000;
   font-size: 16px;
   text-align: center;
   margin-top: 40px;
@@ -112,14 +112,14 @@ nav img{
 
   height: 50px;
   width: 300px;
-  left: 10%;
+  left: 16%;
   margin-top: -20px;
   position: absolute;
 }
 .app-fee h1{
  font-size: 35px;
  font-weight: bold;
- color: #fff;
+ color: #000;
  text-align: center;
  margin-top: 10px;
 }
@@ -130,34 +130,34 @@ nav img{
 
 }
 .fee-ans{
-  background: #c2b116;
+
   border-radius: 70px;
   height: 10vh;
-  width: 30%;
-  left: 1%;
+  width: 37%;
+  left: 8%;
   position: absolute;
-  margin-top: 56px;
+  margin-top: 36px;
 }
 .fee-ans p{
 
-  color:#fff;
+  color:#000;
   font-size: 16px;
   margin-top: 21px;
-  margin-left: 100px;
+  margin-left: 45px;
 }
 .part-board h1{
-  color: #fff;
+  color: #000;
   font-size: 35px;
   font-weight: bold;
   margin-top: -60px;
   position: absolute;
-  right: 16%;
+  right: 18%;
 }
 .participate-board{
-  background:#c2b116;
+
   border-radius: 30px;
-  margin-top: 320px;
-  width: 40%;
+  margin-top: 300px;
+  width: 45%;
   height: 40px;
   padding: 5px;
   top: 45%;
@@ -165,47 +165,43 @@ nav img{
   right: 6%;
 }
 .participate-board p{
-  color: #fff;
+  color: #000;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -160px;
   font-size: 16px;
 }
 .footer{
-  background-color: #a09e9ec7;
+  background-color: #0121d6;
   height: 250px;
 }
 .teams-form h1{
-  color: #fff;
+  color: #000;
   font-size: 35px;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 40px;
   position: absolute;
-  right: 10%;
+  right: 18%;
 
 }
 .workshop{
-  background: #ff0000;
+
   border-radius: 30px;
   margin-top: 415px;
-  width: 40%;
+  width: 45%;
   height: 40px;
   padding: 5px;
-  top: 45%;
+  top: 30%;
   position: absolute;
   right: 6%;
 }
 .workshop p{
-  color: #fff;
+  color: #000;
   text-align: center;
   margin-top: 10px;
   font-size: 16px;
 }
 
-footer p{
-  color: #fff;
-  text-align: center;
-  padding-top: 35px;
-}
+
 
 
 
@@ -234,7 +230,7 @@ footer p{
   padding-right: 5px;
 }
 .nav-bars ul li a:hover{
-  color: #0121d6;
+  color: #bebebe;
   font-size: 15px;
   transition: 1s;
 }
@@ -243,10 +239,6 @@ footer p{
   text-align: center;
   margin-top: 5px;
 }
-
-
-
-
 
 
 

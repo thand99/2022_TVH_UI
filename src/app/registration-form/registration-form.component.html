@@ -8,23 +8,27 @@
 </head>
 <body>
     <div class="container">
+      <div class="heading">
+        <h1>TVH Registration Form</h1>
+      </div>
         <div class="reg-form">
-            <form action="">
+            <form action="">   
+              <a href="home"><img src="../assets/tut-logo.png"></a>
+              <br>
                 <p>First And Last Name</p>
-                <input type="text" class="name" placeholder="Enter your full names">
-                <div class="gen-date">
+                <input type="text" class="name" placeholder="Enter your full names" >
+                <div class="gen-date" >
                     <p>Gender</p>
                     <br>
                     <select class="the-gender">
                         <option value="choose">Choose Option</option>
-                        <option value="male">Male</option>
-                        <option value="male">Female</option>
+                        <option value="male" >Male</option>
+                        <option value="male" >Female</option>
                     </select>
                     <p>Date Of Birth</p>
-                    <input type="date" class="date" placeholder="Enter your date of birth">
                 </div>
                 <p>Student Mail</p>
-                <input type="text" class="email" placeholder="Enter your student email">
+                <input type="text" class="email" placeholder="Enter your student email"  >
                 <p>Institution</p>
                 <br>
                 <select class="your-insti">
@@ -36,7 +40,7 @@
 
                 </select>
                 <p>Recent Proof Of Registration</p>
-                <input type="file" class="browser" >
+                <input type="file" class="browser"  >
                 <p>Mobile Number</p>
                 <input type="text" class="number" placeholder="Enter your cellphone number">
                 <p>Programming Skills?</p>
@@ -48,7 +52,7 @@
 
 
                 </select>
-                <p>Status</p>
+                <p>Applicant Status</p>
                 <br>
                 <select class="status">
                     <option value="choose">Choose Option</option>
@@ -62,10 +66,10 @@
                     <option value="friends">Friends</option>
                     <option value="male">Tshwane University Of Technology</option>
                     <option value="male">Other Sites</option>
-                    <option value="male">Social Media</option>
+                    <option value="male" >Social Media</option>
                 </select>
 
-                <input type="submit" value="Submit">
+                <input type="submit" click = "clickhandle()" value="Submit">
 
             </form>
         </div>

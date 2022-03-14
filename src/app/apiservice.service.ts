@@ -15,12 +15,23 @@ export class ApiserviceService {
 
     apiUrl = 'http://localhost:9002/login';
 
+    apeUrl = 'http://localhost:9002/registration';
+
+    
+
     ///get data
 
 
     getAllData(credintials : any)
     {
-      return this._http.post<any>(this.apiUrl, credintials
-      );
+      return this._http.post<any>(this.apiUrl, credintials);
+
+      
+     
+    }
+
+    getRegistration(credintials:any)
+    {
+      return this._http.post<any>(this.apeUrl, credintials );
     }
 }
