@@ -10,8 +10,14 @@
     <div class="container">
         <div class="reg-form">
             <form action="">
+                <div class="pic-logo">
+                    <img src="../assets/tut-logo.png">
+                </div>
+                <div class="heading">
+                    <h1>TVH Registration Form</h1>
+                </div>
                 <p>First And Last Name</p>
-                <input type="text" class="name" placeholder="Enter your full names">
+                <input type="text" class="name" placeholder="Enter your full names" required>
                 <div class="gen-date">
                     <p>Gender</p>
                     <br>
@@ -21,10 +27,12 @@
                         <option value="male">Female</option>
                     </select>
                     <p>Date Of Birth</p>
-                    <input type="date" class="date" placeholder="Enter your date of birth">
+                    <input type="date" class="date" placeholder="Enter your date of birth" required>
                 </div>
                 <p>Student Mail</p>
-                <input type="text" class="email" placeholder="Enter your student email">
+                <input type="text" class="email" placeholder="Enter your student email" required>
+                <p>Password</p>
+                <input type="text" class="email" placeholder="Enter your password" required>
                 <p>Institution</p>
                 <br>
                 <select class="your-insti">
@@ -38,15 +46,15 @@
                 <p>Recent Proof Of Registration</p>
                 <input type="file" class="browser" >
                 <p>Mobile Number</p>
-                <input type="text" class="number" placeholder="Enter your cellphone number">
-                <p>Programming Skills?</p>
+                <input type="text" class="number" placeholder="Enter your cellphone number" required>
+                <p>Participant Skills</p>
                 <br>
                 <select class="your-insti">
                     <option value="choose">Choose Option</option>
-                    <option value="male">Yes</option>
-                    <option value="male">No</option>
-
-
+                    <option >Analyst</option>
+                    <option >Programmer</option>
+                    <option >Graphic designer</option>
+                    <option >Marketer</option>
                 </select>
                 <p>Status</p>
                 <br>
@@ -55,16 +63,7 @@
                     <option value="team">Team</option>
                     <option value="male">Individual</option>
                 </select>
-                <p>How Did you Hear About Us?</p>
-                <br>
-                <select class="about-us">
-                    <option value="choose">Choose Option</option>
-                    <option value="friends">Friends</option>
-                    <option value="male">Tshwane University Of Technology</option>
-                    <option value="male">Other Sites</option>
-                    <option value="male">Social Media</option>
-                </select>
-
+               
                 <input type="submit" value="Submit">
 
             </form>

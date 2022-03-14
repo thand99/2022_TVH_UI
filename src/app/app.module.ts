@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { AdminComponent } from './admin/admin.component';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     HomeComponent,
     RewardsComponent,
     GalleryComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
