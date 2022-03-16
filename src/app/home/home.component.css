@@ -7,39 +7,44 @@
   justify-content: space-between;
   padding: 2% 8%;
   align-items: center;
-  background: #fff;
+  background: rgb(0, 14, 95);
   height: 50px;
 }
 nav img{
-  width: 70px;
-  margin-left: -90px;
+  width: 130px;
+  margin-left: -170px;
   filter: brightness(110%);
+  position: absolute;
+  margin-top: 4%;
 }
 .nav-links{
   flex:1;
   text-align: center;
+  justify-content: space-between;
+  height: 0%;
 }
 .nav-links ul li{
   display: inline-block;
   padding: 8px 12px;
   position: relative;
+ 
 }
 .nav-links ul li a{
   text-decoration: none;
-  color: #000;
-  font-size: 15px;
-  padding-left: 5px;
-  padding-top: 2px;
+  color:white;
+  font-size: medium;
+  padding-left: 30px;
+  padding-top: 8px;
   padding-bottom: 2px;
   padding-right: 5px;
+  
+  transition: .6s ease-in-out;
 }
 .nav-links ul li a:hover{
-  color: #bebebe;
-  font-size: 15px;
-  transition: 1s;
+  color: #d1d1d1;
+
+
 }
-
-
 .main{
 
   height: 100vh;
@@ -70,14 +75,14 @@ footer p{
 
   font-size: 43px;
   font-weight: bolder;
-  color: #010e57;
+  color: rgb(38, 61, 190);
   text-align: center;
 }
 .year h2{
   margin-top: 80px;
   font-size: 30px;
   font-weight: bold;
-  color: #010e57;
+  color: rgb(38, 61, 190);
   font-weight: bold;
   text-align: center;
 
@@ -94,13 +99,14 @@ footer p{
 .launch-time div{
   flex-basis: 180px;
   padding:10px;
-  color: #010e57;
+  color: rgb(38, 61, 190);
+  font-size: 20px;
 }
 .launch-time div p{
-  font-size: 28px;
+  font-size: 35px;
   margin-top: 7px;
   margin-bottom: -14x;
-  color: #010e57;
+  color: rgb(38, 61, 190);
   font-weight: bold;
 
 }
@@ -118,16 +124,14 @@ footer p{
 }
 
 .slider figure img{
-  height: 60vh;
+  height: 100vh;
   width: 100%;
-  background: rgba(12, 12, 12, 0.829);
+  background: rgba(136, 13, 13, 0.829);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   float: left;
   box-sizing: border-box;
-
-
 
 }
 
@@ -160,25 +164,20 @@ footer p{
 
 }
 .heading {
-  color:#fff;
+  color:white;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
   font-family: 'Times New Roman';
   position: absolute;
   text-align: center;
-  padding-top: 200px;
-  margin-left: 350px;
-
-
-
-
+  padding-top: 400px;
+  margin-left: 850px;
 }
 .thebutton{
-
     left: 50%;
     transform: translate(-50%,-50%);
     position: absolute;
-    margin-top: -50px;
+    margin-top: -200px;
 
 }
 .btn{
@@ -188,65 +187,19 @@ footer p{
     border-radius: 25px;
     width:210px;
     height: 50px;
-    color: #fff;
+    color:white;
     font-weight: bold;
     font-size: 25px;
     cursor: pointer;
 
 }
-.notice-board{
-
-  background-color:#fff;
-  height: 480px;
-}
-#tvh-sec{
-
-  margin-bottom: 30px;
-  background-color: #001588;
-  height: 250px;
+.btn:hover{
+  box-shadow: 0 0 10px #000;
 
 }
-.tvh-defination h1{
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  font-size: 30px;
-}
-.tvh-defination p{
-  margin-top: 40px;
-  text-align: center;
-  color: #fff;
-  font-size: 17px;
-}
-
-.announcements h1{
-  text-align: center;
-
-  margin-left: 540px;
-  height: 50px;
-  width: 20%;
-  margin-top: 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-
-
 .footer{
-  background-color: #fff;
-  height: 250px;
-}
-.sponsors{
-  display: inline-block;
-  position: relative;
-  left: 20%;
-
-
-}
-.sponsors img{
-  margin: 10px;
-  width: 100px;
+  background: rgb(0, 14, 95);
+  height: 158px;
 }
 .navig-bar{
   display: flex;
@@ -265,38 +218,26 @@ footer p{
 }
 .nav-bars ul li a{
   text-decoration: none;
-  color: #000;
-  font-size: 15px;
+  color: #fff;
+  font-size: medium;
   padding-left: 5px;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 5px;
-}
-.nav-bars ul li a:hover{
-  color: #bebebe;
-  font-size: 15px;
-  transition: 1s;
-}
-.announ-words{
-  border: 1px solid #686868;
-  width:85%;
-  height: 150px;
-  left: 50%;
-  margin-top: -160px;
-  position: relative;
-  transform: translate(-50%,50%);
-  padding: 70px 30px;
-  border-radius: 20px;
+  transition: .6s ease-in-out;
 
 }
-.announ-words:hover{
-  box-shadow: 0 0 20px #000;
+.nav-bars ul li a:hover{
+  color: #d1d1d1;
+
 }
 
 .footer p{
-  color: #000;
+  color: #fff;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 1px;
+  font-size: medium;
+  
 }
 
 
