@@ -8,47 +8,32 @@
  
 </head>
 <body>
- 
-
-    <div class="icon">
-      <a href="home"> <fa-icon [icon] = "faArrow"></fa-icon>  </a>
-    </div>
-  
-  
-  <h1>Admin Portal</h1> 
-  <section class="container">
-        <div class="content">
-            <p> Nokulunga</p> <input type="checkbox"> <a class="link"  href="">View</a>
-            <p>Vuyelo Chauke</p> <input type="checkbox"> <a class="link" href="">View</a>
-            <p>Lindelani Mthemthwa</p> <input type="checkbox"> <a class="link" href="">View</a>
-            <p>Sandile Mhlophe</p> <input type="checkbox"> <a class="link"href="">View</a>
-            <p>Nhlakanipho Makhaza</p> <input type="checkbox"> <a class="link" href="">View</a>
-            <p>Thandi Mkhwebo</p> <input type="checkbox"> <a class="link"href="">View</a>
-            <p>Richard Sthole</p> <input type="checkbox"> <a class="link" href="">View</a>
+  <div class="container">
+       <h1>Admin Portal</h1>
+          <div class="title">
+              <h2>Applicants List</h2>
           </div>
-
-            <div class="btn">
-                <button class="acc-btn">Accept</button>
-                <button  type="button">Reject</button>
-            </div>
-                
-        <div class="reply">
-          <textarea name="message"  id="comment" rows="5" cols="20"></textarea>
-        </div >
-        <br>
-
-
-        <div class="dropbutton">
-            <div class="dropdown">
-              <select>
-                <option>Comment</option>
-                <option>Select marked</option>
-                <option>Select all marked</option>
-              </select>
-            </div>
-        </div>
-
-    </section>
-    
+              <table class="info">
+                  <thead>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Nhlakanipho"></td>
+                      <td data-label="Makhaza"></td>
+                      <td data-label="nhlakanipho19sphelele@gmail.com"></td>
+                      <td data-label=""></td>
+                      <td data-label=""><button class="acc">Accept</button><button class="rej">Reject</button></td>
+                      <a href="View"></a>
+                    </tr>
+                  </tbody>
+              </table>
+   
+   
+</div>
 </body>
 </html>

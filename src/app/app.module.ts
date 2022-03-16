@@ -10,7 +10,6 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminComponent } from './admin/admin.component';
-import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    FontAwesomeModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
