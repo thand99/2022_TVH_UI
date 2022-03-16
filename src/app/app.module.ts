@@ -12,12 +12,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import {HttpClientModule} from '@angular/common/http';
 import { ApiserviceService } from './apiservice.service';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
-
-
-
-
-
-
+import { Injectable } from '@angular/core';
 
 
 @NgModule({
@@ -28,6 +23,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     RewardsComponent,
     GalleryComponent,
     LoginAdminComponent,
+    RegistrationFormComponent
     
     
   ],
@@ -37,7 +33,10 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     FormsModule
+
   ],
   providers: [ApiserviceService],
   bootstrap: [AppComponent]

@@ -5,71 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tvh form</title>
 
+
+
 </head>
 <body>
     <div class="container">
-      <div class="heading">
-        <h1>TVH Registration Form</h1>
-      </div>
         <div class="reg-form">
-            <form action="">   
-              <a href="home"><img src="../assets/tut-logo.png"></a>
-              <br>
+            <form action="" class="myform" #f="" ngNativeValidate class="ng-pristine ng-invalid " ng-touched>
+                <div class="pic-logo">
+                    <img src="../assets/tut-logo.png">
+                </div>
+                <div class="heading">
+                    <h1>TVH Registration Form</h1>
+                </div>
                 <p>First And Last Name</p>
-                <input type="text" class="name" placeholder="Enter your full names" >
-                <div class="gen-date" >
+                <input #name="ngModel"  type="text" class="names" placeholder="Enter your full names" required   [(ngModel)]="names" id="names" name="string" namesControl="ngModel" >
+                 
+                 <div *ngIf="name.touched && name.invalid " class="alert alert-danger">
+                    Names are required 
+
+                </div>
+
+                <div class="gen-date">
                     <p>Gender</p>
                     <br>
-                    <select class="the-gender">
-                        <option value="choose">Choose Option</option>
-                        <option value="male" >Male</option>
-                        <option value="male" >Female</option>
+                    <select  class="the-gender" required [(ngModel)]="gender" id="gender" name="string" >
+                        <option value="choose" >Choose Option</option>
+                        <option value="male"  >Male</option>
+                        <option value="male"  >Female</option>
                     </select>
+
+
                     <p>Date Of Birth</p>
+                    <input #date="ngModel" type="date" class="date" placeholder="Enter your date of birth"  required  [(ngModel)]="dateBirth" id="dateBirth" name="date" >
+
+                    <div *ngIf="date.touched && date.invalid " class="alert alert-danger">
+                        Date of birth is required 
+   
+                    </div>
+
                 </div>
-                <p>Student Mail</p>
-                <input type="text" class="email" placeholder="Enter your student email"  >
+                <p>Student eMail</p>
+                <input #email="ngModel" email type="text" class="email" placeholder="Enter your student email" required  [(ngModel)]="stud_email" id="stud_email" name="string" email="true" >
+                
+                <div *ngIf="email.touched && email.errors " class="alert alert-danger">
+                    Email is required 
+
+                </div>
+                <div *ngIf="email.touched && email.invalid " class="alert alert-danger">
+                    Enter a valid email
+
+                </div>
+
+                <p>Password</p>
+                <input type="text" class="email" placeholder="Enter your password" required [(ngModel)]="password" id="password" name="string">
+
+
+
                 <p>Institution</p>
                 <br>
-                <select class="your-insti">
-                    <option value="choose">Choose Option</option>
+                <select #institution="ngModel" class="your-insti" [(ngModel)]="institute" id="institute" name="string">
+                    <option  value="choose">Choose Option</option>
                     <option value="tut">Tshwane University Of Technology</option>
                     <option value="up">University Pretoria</option>
                     <option value="smu">Sefako Makgatho University</option>
                     <option value="unisa">Unisa</option>
 
                 </select>
+                <div *ngIf="institution.touched && institution.invalid " class="alert alert-danger">
+                    Please select the institution is required 
+
+                </div>
                 <p>Recent Proof Of Registration</p>
-                <input type="file" class="browser"  >
+                <input type="file" class="browser"  [(ngModel)]="academicRecord" id="academicRecord" name="string">
                 <p>Mobile Number</p>
-                <input type="text" class="number" placeholder="Enter your cellphone number">
-                <p>Programming Skills?</p>
+                <input #cell="ngModel" type="text" class="number" placeholder="Enter your cellphone number" required [(ngModel)]="mNumber" id="mNumber" name="string">
+
+                <div *ngIf="cell.touched && cell.invalid " class="alert alert-danger">
+                    Email is required 
+
+                </div>
+
+                <p>Participant Skills</p>
                 <br>
-                <select class="your-insti">
-                    <option value="choose">Choose Option</option>
-                    <option value="male">Yes</option>
-                    <option value="male">No</option>
-
-
+                <select #skill="ngModel" class="your-insti" [(ngModel)]="skills" id="skills" name="string">
+                    <option value="choose" >Choose Option</option>
+                    <option value="analyst" >Analyst</option>
+                    <option value="Programmer">Programmer</option>
+                    <option value="graphic designer">Graphic designer</option>
+                    <option value="markerter">Marketer</option>
                 </select>
-                <p>Applicant Status</p>
+                <div *ngIf="skill.touched && skill.invalid " class="alert alert-danger">
+                    Please select the skill is required 
+
+                </div>
+                <p>Status</p>
                 <br>
-                <select class="status">
-                    <option value="choose">Choose Option</option>
+                <select #stat="ngModel" class="status"  [(ngModel)]="status" id="status" name="string" required>
+                    <option value="choose" >Choose Option</option>
                     <option value="team">Team</option>
-                    <option value="male">Individual</option>
-                </select>
-                <p>How Did you Hear About Us?</p>
-                <br>
-                <select class="about-us">
-                    <option value="choose">Choose Option</option>
-                    <option value="friends">Friends</option>
-                    <option value="male">Tshwane University Of Technology</option>
-                    <option value="male">Other Sites</option>
-                    <option value="male" >Social Media</option>
+                    <option value="male" >Individual</option>
                 </select>
 
-                <input type="submit" click = "clickhandle()" value="Submit">
+                <div *ngIf="stat.touched && stat.invalid " class="alert alert-danger">
+                    Please select the status is required 
+
+                </div>
+                <input type="submit" (click)="clickhandle()" value="Submit">
 
             </form>
         </div>
