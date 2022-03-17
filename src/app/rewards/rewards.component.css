@@ -35,7 +35,7 @@ nav img {
   padding-right: 5px;
 }
 .nav-links ul li a:hover {
-  color: darkgoldenrod;
+  color: rgb(218, 158, 7);
   font-size: 15px;
   transition: 1s;
 }
@@ -49,32 +49,34 @@ nav img {
   font-size: 240%;
 }
 .container1 {
-  width: 50%;
   margin: 0 auto;
   padding-top: 35em;
   font-family: Arial, Helvetica, sans-serif;
 }
-.container3 {
-  width: 25%;
-  margin: 0 auto;
-  height: 30%;
-  padding-left: 4rem;
-  font-weight: bolder;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: red;
-  border-radius: 10px;
-}
+
 .container2 {
   width: 65%;
   margin: 0 auto;
   padding-top: 2em;
   font: weight 0;
 }
-p {
+.container1 li {
   font-size: larger;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
+  width: 19%;
+  margin: 0 auto;
+  height: 30%;
+  padding-left: 2rem;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+  border-radius: 10px;
+  list-style: none;
+}
+.button {
+  text-decoration: none;
+  color: white;
 }
 .row {
   width: 100%;
@@ -108,9 +110,18 @@ footer {
 }
 /* Heading */
 h2 {
-  color: darkgoldenrod;
+  color: rgb(218, 158, 7);
   padding-left: 4em;
 }
 h3 {
-  color: darkgoldenrod;
+  color: rgb(218, 158, 7);
+  font-size: 200%;
+  padding-left: 25rem;
+}
+/* Paragraph */
+p {
+  width: 30%;
+  font-size: medium;
+  font-weight: bold;
+  padding-left: 32rem;
 }
