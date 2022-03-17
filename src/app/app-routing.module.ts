@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -8,6 +8,7 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { AdminComponent } from './admin/admin.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { AppComponent } from './app.component';
 
 
 
@@ -24,7 +25,9 @@ const routes: Routes = [
   {path: "gallery", component:GalleryComponent},
   {path:"login-admin", component:LoginAdminComponent},
   {path:"admin", component:AdminComponent},
-  {path:"registration-form",component:RegistrationFormComponent}
+  {path:"registration-form",component:RegistrationFormComponent},
+
+
 
 
 

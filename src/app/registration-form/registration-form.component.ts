@@ -7,6 +7,8 @@ import {  EventEmitter, Input, Output } from '@angular/core';
 
 
 
+
+
 @Component({
   selector: 'app-registration-form',
   templateUrl: './registration-form.component.html',
@@ -22,8 +24,30 @@ export class RegistrationFormComponent implements OnInit {
   
 
 
+  constructor(private service:ApiserviceService, private route:Router) { }
 
 
+ 
+
+
+  ngOnInit(): void {
+
+
+    this.registerForm = new FormGroup({
+
+      "names": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),///
+      "email": new FormControl(null, [Validators.required, Validators.email]),///
+      "password": new FormControl(null,Validators.required ), ///
+      "mobileNumber": new FormControl(null,[Validators.required, Validators.pattern('[0-9]*')] ),
+      "institutes": new FormControl(null,Validators.required ),
+      "skill": new FormControl(null,Validators.required ),
+      "statuss": new FormControl(null,Validators.required )
+
+    })
+  }
+
+
+  
   myform!:FormGroup;
 
 
@@ -38,26 +62,37 @@ export class RegistrationFormComponent implements OnInit {
   public skills:string =''
   public status:string =''
 
+  registerForm:any; ////
+
+  //////////
+
+
+
+
+  ///submit Function
+
+  submitData()
+  {
+    console.log(this.registerForm.value);
+
+    if(this.registerForm.valid)
+    {
+       alert('Thank you, your application submitted');
+       this.registerForm.reset();
+
+       this.route.navigate(["home"])
+    }
+
+  }
+
+  get namess(){return this.registerForm.get('names');}
+  get emails(){return this.registerForm.get('email');}
+  get passwords(){return this.registerForm.get('password');}
+  get mobilenumber(){return this.registerForm.get('mobileNumber');}
+  get inst(){return this.registerForm.get('institutes');}
+  get skil(){return this.registerForm.get('skill');}
+  get statess(){return this.registerForm.get('statuss');}
   
-
-
-
-
-  constructor(private service:ApiserviceService, private route:Router) { }
-
-  ngOnInit(): void {
-
-      this.myform = new FormGroup({
-
-        names: new FormControl('',[Validators.required, Validators.minLength(5)])
-      })
-
-
-  }
-
-  get f(){
-    return this.myform.controls;
-  }
 
 
   clickhandle(){
@@ -67,6 +102,8 @@ export class RegistrationFormComponent implements OnInit {
     this.service.getRegistration({"names":this.names, "gender": this.gender,"dateBirth": this.dateBirth,"stud_email": this.stud_email ,"password": this.password,"institute": this.institute,"academicRecord": this.academicRecord,"mobileNumber": this.mNumber,"skill": this.skills,"status": this.status }).subscribe((res)=>{
        
       console.log(res.message);
+
+
 
       if(res.message =="Application Successfully submited")
       {
@@ -83,7 +120,16 @@ export class RegistrationFormComponent implements OnInit {
     
   }
 
-}
+
+
+  }
+
+
+
+
+
+
+
 
 
 
