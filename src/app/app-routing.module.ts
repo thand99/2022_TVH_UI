@@ -6,6 +6,7 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 
@@ -18,6 +19,9 @@ const routes: Routes = [
   {path: "gallery", component:GalleryComponent},
   {path: "registration-form", component:RegistrationFormComponent},
   {path: "admin", component:AdminComponent},
+  {path: "login-form", component:LoginFormComponent},
+
+
 ];
 
 @NgModule({

@@ -10,6 +10,12 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginFormComponent } from './login-form/login-form.component';
+import {MatButtonModule} from '@angular/material/button';
+
+
+
 
 @NgModule({
   declarations: [
@@ -19,12 +25,18 @@ import { AdminComponent } from './admin/admin.component';
     RewardsComponent,
     GalleryComponent,
     RegistrationFormComponent,
-    AdminComponent
+    AdminComponent,
+    LoginFormComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
