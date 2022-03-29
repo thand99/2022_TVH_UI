@@ -3,8 +3,8 @@
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <title>The First Webpage</title>
 
 </head>
@@ -14,7 +14,8 @@
 
       <a href="home"><img src="../assets/tut-logo.png"></a>
 
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
+        <i class="las la-times" onclick="hideMenu()" ></i>
         <ul>
           <li><a href="home">HOME</a></li>
           <li><a href="about">ABOUT</a></li>
@@ -23,6 +24,7 @@
           <li><a href="gallery">TEAM</a></li>
         </ul>
       </div>
+      <i class="las la-bars" onclick="showMenu()" ></i>
     </nav>
   </section>
 
@@ -65,7 +67,7 @@
                 <img src="../assets/slider.jpg">
             </div>
             <div class="slide2">
-              <span class="heading">Are You Passionate About Hacking?</span>
+              <span class="heading">Do You Have Passion In Hacking?</span>
                 <img src="../assets/sliderr2.jpg">
             </div>
             <div class="slide3">
@@ -114,6 +116,15 @@
   </div>
 
 </section>
+<script>
+   var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+</script>
 
 </body>
 </html>

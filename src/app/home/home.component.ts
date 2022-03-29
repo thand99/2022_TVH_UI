@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+
   countDownDate = new Date();
 
   days:any = 45;
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   x = setInterval(()=>{
 
-    var futureDate = new Date("March 27, 2022 01:31:24 ").getTime();
+    var futureDate = new Date("April 27, 2022 01:31:24 ").getTime();
     var today = new Date().getTime();
     var distance = futureDate - today;
 
