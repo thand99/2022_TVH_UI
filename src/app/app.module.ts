@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminboardComponent } from './adminboard/adminboard.component';
+import { ParticipantsComponent } from './participants/participants.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdminComponent } from './admin/admin.component';
     RewardsComponent,
     GalleryComponent,
     RegistrationFormComponent,
-    AdminComponent
+    AdminboardComponent,
+    ParticipantsComponent
   ],
   imports: [
     BrowserModule,
