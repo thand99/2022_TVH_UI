@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif ;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+}
+img{
+    width: 130px;
+}
+.title h2{
+    position: relative;
+    color: rgb(4, 4, 121);
+    font-size: 30px;
+}
+.container{
+    position: relative;
+    left: 10%;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    left: 0%;
+    margin-top: -80px;
+    color: rgb(4, 4, 121);
+}
+table{
+    width: 1800px;
+    border-collapse:collapse;
+}
+
+th,td{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+tr th{
+    position: relative;
+    right: 2%;
+}
+button{
+    cursor: pointer;
+    height: 35px;
+    width: 70px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+.acc{
+    background: rgb(245, 14, 14);
+    color: white;
+}
+.rej{
+    position: relative;
+    left: 10%;
+    background: rgb(4, 4, 121);
+    color: white;
+}
+.view{
+    position: relative;
+    left: 25%;
+    cursor: pointer;
+}
+.btn{
+    position: absolute;
+    left: 70%;
+    width: 120px;
+    height: 40px;
+    color: white;
+    background: rgb(4, 4, 121);
+}
+
+
+
