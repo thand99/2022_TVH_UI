@@ -9,6 +9,8 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { AdminComponent } from './admin/admin.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AppComponent } from './app.component';
+import { AdminboardComponent } from './adminboard/adminboard.component';
+import { TestingComponent } from './testing/testing.component';
 
 
 
@@ -26,6 +28,12 @@ const routes: Routes = [
   {path:"login-admin", component:LoginAdminComponent},
   {path:"admin", component:AdminComponent},
   {path:"registration-form",component:RegistrationFormComponent},
+  {path:"adminboard",component:AdminboardComponent},
+
+  //Testing
+
+  {path:"",component:TestingComponent}
+
 
 
 

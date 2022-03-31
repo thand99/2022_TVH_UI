@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { ApiserviceService } from './apiservice.service';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { Injectable } from '@angular/core';
+import { AdminboardComponent } from './adminboard/adminboard.component';
+import { TestingComponent } from './testing/testing.component';
+
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { Injectable } from '@angular/core';
     RewardsComponent,
     GalleryComponent,
     LoginAdminComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    AdminboardComponent,
+    TestingComponent,
+ 
     
     
   ],

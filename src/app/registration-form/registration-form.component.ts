@@ -156,7 +156,6 @@ export class RegistrationFormComponent implements OnInit {
       console.log('invalid');
 
       
-      
       return;
     }else 
     {
@@ -164,7 +163,7 @@ export class RegistrationFormComponent implements OnInit {
       //this.hold = this.registerForm.valid;
 
       console.log(this.hold);
-      console.log('not valid');
+      console.log('valid');
 
       this.service.getRegistration({"fullName":this.names, "surname":this.surname, "gender": this.gender,"dateOfBirth": this.dateBirth,"emailAddress": this.stud_email,"institution": this.institute,"academicRecord": this.academicRecord,"mobileNumber": this.mNumber,"skills": this.skills }).subscribe((res)=>{
         console.log(this.names);

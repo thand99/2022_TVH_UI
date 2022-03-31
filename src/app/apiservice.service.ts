@@ -18,7 +18,9 @@ export class ApiserviceService {
 
     apiUrl = 'http://localhost:9002/login';
 
-    apeUrl = 'http://localhost:9002/registration';
+    apeUrl = 'http://localhost:9002/registrations';
+
+    apqUrl = 'http://localhost:9002/adminLoadFile';
 
     
 
@@ -36,5 +38,10 @@ export class ApiserviceService {
     getRegistration(credintials:any)
     {
       return this._http.post<any>(this.apeUrl, credintials );
+    }
+
+    getadminLoadFile():Observable<any>
+    {
+      return this._http.get(`${this.apqUrl}`);
     }
 }

@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="reg-form">
-            <form action="" #regForm="ngForm" [formGroup]="registerForm"  (ngSubmit)="clickhandle() " >
+            <form  #regForm="ngForm" [formGroup]="registerForm"  (ngSubmit)="clickhandle() " >
                 
     {{regForm.submitted}}     
                 
@@ -20,17 +20,17 @@
                     <h1>TVH Registration Form</h1>
                 </div>
                 <p>Full Names</p>
-                <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="names" id="names" name="string" namesControl="ngModel">
+                <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="names" id="names" name="name" namesControl="ngModel">
                 
           <!---error message-->
-          <div *ngIf=" submitted &&  namess.invalid && (namess.touched || namess.dirty)"   >
+          <div *ngIf=" namess.invalid && (namess.touched || namess.dirty)"   >
             <span class="alert" *ngIf="submitted && namess.errors?.required">*Full names are required</span>
             <span class="alert" *ngIf="namess.errors?.pattern">*Enter only characters</span>
 
          </div>
 
                 <p>Surname</p>
-                <input type="text" formControlName="surname" class="name" placeholder="Enter your surname" required [(ngModel)]="surname" id="surname" name="string" namesControl="ngModel">
+                <input type="text" formControlName="surname" class="name" placeholder="Enter your surname" required [(ngModel)]="surname" id="surname" name="surname" namesControl="ngModel">
                 <div class="gen-date">
 
           <!---error message-->
@@ -42,7 +42,7 @@
 
                     <p>Gender</p>
                     <br>
-                    <select class="the-gender" formControlName="genders" name="inst" required  [(ngModel)]="gender" id="gender">
+                    <select class="the-gender" formControlName="genders" name="genders" required  [(ngModel)]="gender" id="gender">
                       
                         <option disabled value="choose">Choose Option</option>
                         <option *ngFor="let genderss of genders" [value]="genderss.value">
@@ -55,7 +55,7 @@
 
 
                     <p>Date Of Birth</p>
-                    <input  type="date" class="date" formControlName="dates" placeholder="Enter your date of birth" required [(ngModel)]="dateBirth" id="dateBirth" name="date">
+                    <input  type="date" class="date" formControlName="dates" placeholder="Enter your date of birth" required [(ngModel)]="dateBirth" id="dates" name="dates">
                 </div>
 
                                             <!---error message-->
@@ -65,7 +65,7 @@
 
 
                 <p>Email Address</p>
-                <input type="text"  formControlName="email" class="email" placeholder="Enter your email" required [(ngModel)]="stud_email" id="stud_email" name="string" email="true">
+                <input type="text"  formControlName="email" class="email" placeholder="Enter your email" required [(ngModel)]="stud_email" id="email" name="email" email="true">
                 
                 
                 <!---error message-->
@@ -77,7 +77,7 @@
                 
                 <p>Institution</p>
                 <br>
-                <select  class="your-insti" formControlName="institutes" name="inst" required  [(ngModel)]="institute" id="institute">
+                <select  class="your-insti" formControlName="institutes" name="institutes" required  [(ngModel)]="institute" id="institutes">
                   
                     <option disabled value="choose">Choose Option</option>
                     <option  *ngFor="let institutess of institutes" [value]="institutess.value">
@@ -91,7 +91,7 @@
 
                 </select>
                 <p>Upload Academic Record</p>
-               <input type="file" formControlName="dates" class="browser"  [(ngModel)]="academicRecord" id="academicRecord" name="dates">
+               <input type="file" formControlName="academic" class="browser"  [(ngModel)]="academicRecord" id="academic" name="academic">
 
                     <!---error message-->
                      <div *ngIf="submitted && academicss.invalid && (academicss.touched || academicss.dirty)" >
@@ -103,7 +103,7 @@
 
 
                 <p>Mobile Number</p>
-                <input type="text" formControlName="mobileNumber" class="number" placeholder="Enter your cellphone number" required [(ngModel)]="mNumber" id="mNumber" name="string">
+                <input type="text" formControlName="mobileNumber" class="mobileNumber" placeholder="Enter your cellphone number" required [(ngModel)]="mNumber" id="mobileNumber" name="mobileNumber">
                 
                 <!---error message-->
                 <div *ngIf="mobilenumber.invalid && (mobilenumber.touched || mobilenumber.dirty)" >
@@ -114,13 +114,13 @@
                 
                 <p>Participant Skills</p>
                 <br>
-                <select class="your-insti" formControlName="skill" name="inst" [(ngModel)]="skills" id="skills">
+                <select class="your-insti" formControlName="skill" name="skill" [(ngModel)]="skills" id="skill">
                     <option   value="choose">Choose Option</option>
                     <option *ngFor="let skillss of skill" [value]="skillss.value">
                         {{skillss.viewValue}}</option>
 
                         <div *ngIf=" submitted && skil.invalid && (skil.touched || skil.dirty)" >
-                            <span class="alert" *ngIf="skil.errors?.required">*skill is required</span>
+                            <span class="alert" *ngIf="skil.errors?.required">*Skills is required</span>
                             
         
                          </div>

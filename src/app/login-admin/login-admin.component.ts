@@ -44,6 +44,8 @@ export class LoginAdminComponent implements OnInit {
   public passw:string =''
 
 
+
+
   clickhandle(){
 
     this.service.getAllData({"emal":this.emal, "passw": this.password }).subscribe((res)=>{
@@ -53,7 +55,7 @@ export class LoginAdminComponent implements OnInit {
       if(res.message =="login Successful")
       {
         
-          this.route.navigate(["admin"])
+          this.route.navigate(["adminboard"])
       }
       else{
 
