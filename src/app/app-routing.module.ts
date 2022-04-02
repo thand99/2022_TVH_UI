@@ -7,12 +7,15 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 
 
 
 const routes: Routes = [
+  {path: "",component:LandingPageComponent},
   {path: "home",component:HomeComponent},
   {path: "about", component:AboutComponent},
   {path: "rewards", component:RewardsComponent},
@@ -20,6 +23,7 @@ const routes: Routes = [
   {path: "registration-form", component:RegistrationFormComponent},
   {path: "admin", component:AdminComponent},
   {path: "login-form", component:LoginFormComponent},
+  {path: "user-login",component:UserLoginComponent}
 
 
 ];

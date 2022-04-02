@@ -13,9 +13,8 @@
     <nav class="thenav">
 
       <a href="home"><img src="../assets/tut-logo.png"></a>
+      <div class="nav-links">
 
-      <div class="nav-links" id="navLinks">
-        <i class="las la-times" onclick="hideMenu()" ></i>
         <ul>
           <li><a href="home">HOME</a></li>
           <li><a href="about">ABOUT</a></li>
@@ -24,7 +23,7 @@
           <li><a href="gallery">TEAM</a></li>
         </ul>
       </div>
-      <i class="las la-bars" onclick="showMenu()" ></i>
+
     </nav>
   </section>
 
@@ -116,15 +115,7 @@
   </div>
 
 </section>
-<script>
-   var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-      navLinks.style.right = "0";
-    }
-    function hideMenu(){
-      navLinks.style.right = "-200px";
-    }
-</script>
+
 
 </body>
 </html>

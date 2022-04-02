@@ -13,6 +13,8 @@ import { AdminComponent } from './admin/admin.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginFormComponent } from './login-form/login-form.component';
 import {MatButtonModule} from '@angular/material/button';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 
@@ -27,6 +29,8 @@ import {MatButtonModule} from '@angular/material/button';
     RegistrationFormComponent,
     AdminComponent,
     LoginFormComponent,
+    LandingPageComponent,
+    UserLoginComponent,
 
 
 

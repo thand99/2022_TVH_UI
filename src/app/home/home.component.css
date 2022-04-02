@@ -397,15 +397,7 @@ nav .las{
     display: block;
   }
   .nav-links{
-    position: absolute;
-    background: rgb(0, 14, 95);
-    height: 80vh;
-    width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
+
 
   }
   nav .las{
@@ -414,6 +406,8 @@ nav .las{
     margin: 10px;
     font-size: 30px;
     cursor: pointer;
+    left: 75%;
+    position: relative;
   }
   .nav-links ul{
     padding: 10px;
@@ -433,6 +427,9 @@ nav .las{
     padding-right: 5px;
     transition: .6s ease-in-out;
 
+  }
+  #nav-toggle:checked + .nav-links{
+    width: 100px;
   }
   .footer{
     background: rgb(0, 14, 95);
