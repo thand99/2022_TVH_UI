@@ -27,13 +27,13 @@ export class AdminboardComponent implements OnInit {
   }
 
 
-  getStatusAccepted(){
+  getStatusAccepted(us: any){
     console.log("Accepted");
-    this.status ="Accepted"
+    us.status ="Accepted"
   }
-  getStatusRejected(){
+  getStatusRejected(us: any){
     console.log("Rejected");
-    this.status ="Rejected"
+    us.status ="Rejected"
   }
 
   constructor(private service:ApiserviceService, private route:Router) { }

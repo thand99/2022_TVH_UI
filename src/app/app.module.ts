@@ -15,6 +15,9 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { AdminboardComponent } from './adminboard/adminboard.component';
 import { TestingComponent } from './testing/testing.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 
@@ -29,6 +32,9 @@ import { TestingComponent } from './testing/testing.component';
     RegistrationFormComponent,
     AdminboardComponent,
     TestingComponent,
+    LandingPageComponent,
+    SignUpComponent,
+    UserLoginComponent,
  
     
     

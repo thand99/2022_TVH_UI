@@ -10,7 +10,9 @@ import { AdminComponent } from './admin/admin.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AppComponent } from './app.component';
 import { AdminboardComponent } from './adminboard/adminboard.component';
-import { TestingComponent } from './testing/testing.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 
@@ -29,10 +31,12 @@ const routes: Routes = [
   {path:"admin", component:AdminComponent},
   {path:"registration-form",component:RegistrationFormComponent},
   {path:"adminboard",component:AdminboardComponent},
+  {path:"sign-up",component:SignUpComponent},
+  {path:"user-login",component:UserLoginComponent},
+  {path:"",component:LandingPageComponent},
 
   //Testing
 
-  {path:"",component:TestingComponent}
 
 
 

@@ -150,14 +150,14 @@ nav img{
 
 }
 .heading {
-  color:white;
+  color: white;
   font-weight: bold;
   font-size: 60px;
   font-family: 'Times New Roman';
   position: absolute;
-  text-align: center;
+  /*text-align: center;*/
   padding-top: 400px;
-  margin-left: 850px;
+  margin-left: 950px;
 }
 .thebutton{
     left: 50%;
@@ -177,7 +177,6 @@ nav img{
     font-weight: bold;
     font-size: 25px;
     cursor: pointer;
-
 }
 .btn:hover{
   box-shadow: 0 0 10px #000;

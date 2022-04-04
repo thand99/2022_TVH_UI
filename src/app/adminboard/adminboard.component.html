@@ -16,8 +16,8 @@
             <div class="sidebar-user">
                  <img src="../assets/profile.jpg" width="60px" alt="">
                     <div>
-                         <h3>Butlali Makhaza</h3>
-                        <span>butlalimakhaza@gmail.com</span>
+                         <h3>Admin Dashboard</h3>
+                        
                     </div>
             </div>
 
@@ -79,14 +79,14 @@
 
             <div class="content-area">
                 <div class="notification">
-                    <img src="../assets/profile.jpg" width="40px" alt="">    
+                  
                 </div>
             </div>
 
             
              <div class="but-log">
                 <i class="las la-sign-out-alt"></i>
-                <button class="log-icon"> Logout</button>
+                <button class="log-icon" href="home"> Logout</button>
             </div>
         
 
@@ -161,14 +161,14 @@
                                 <td>{{us.institution}}</td>
                                 <td>{{us.skills}}</td>
                                 <td>{{us.academicRecord}}</td>
-                                <td>{{status}}</td>
+                                <td>{{us.status}}</td>
                                 <td>
 
                                    <diV>
-                                       <button (click)="getStatusAccepted()" class="accept">Accept</button>
+                                       <button (click)="getStatusAccepted(us)" class="accept">Accept</button>
                                     </diV>
                                    <diV>
-                                       <button (click)="getStatusRejected()" class="reject">Reject</button>
+                                       <button (click)="getStatusRejected(us)" class="reject">Reject</button>
                                     </diV>
                                 </td>
                             </tr>

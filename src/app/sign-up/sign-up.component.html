@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up </title>
+
+
+  </head>
+  <body>
+
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4>Please fill in this form to create an account</h4>
+
+      <form #regForm="ngForm" [formGroup]="signupForm" (ngSubmit)="clickhandle()" >
+
+        {{regForm.submitted}} 
+
+        <label>First Name</label>
+        <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="name" id="names" name="name" namesControl="ngModel"/>
+
+                  <!---error message-->
+                  <div *ngIf=" submitted && namess.invalid && (namess.touched || namess.dirty)"   >
+                    <span class="alert" *ngIf="submitted && namess.errors?.required">*Full names are required</span>
+                    <span class="alert" *ngIf="namess.errors?.pattern">*Enter only characters</span>
+        
+                 </div>
+
+        <label>Last Name</label>
+        <input type="text" formControlName="surname" class="surname"  placeholder="Enter your last name" required [(ngModel)]="surnam" id="surname" name="surname" namesControl="ngModel" />
+
+                  <!---error message-->
+                  <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
+                    <span class="alert" *ngIf="surnames.errors?.required">*Last name is required</span>
+                    <span class="alert" *ngIf="surnames.errors?.pattern">*Enter only characters</span>
+
+                </div>
+
+        <label>Email</label>
+        <input type="email" placeholder="" formControlName="email" placeholder="Enter username or email" id="email" [(ngModel)]="emal" id="stud_email" name="string" email="true" />
+
+           <!---error message-->
+           <div *ngIf=" submitted && emails.invalid && (emails.touched || emails.dirty)" >
+            <span class="alert" *ngIf="emails.errors?.required">*emails is required</span>
+            <span class="alert" *ngIf="emails.errors?.email">*Enter valid email address</span>
+           
+            </div>
+
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="Enter password"  id="password" [(ngModel)]="passwrd" id="password" name="string"/>
+
+                <!---error message-->
+                <div *ngIf="submitted && passwords.invalid && (passwords.touched || passwords.dirty)" >
+                  <span class="alert" *ngIf="passwords.errors?.required">*Password is required</span>
+                  <span class="alert" *ngIf="passwords.errors?.minlength">*Password must be atleast be 6 characters</span>
+                 
+              </div>
+
+        <label>Confirm Password</label>
+        <input type="password" formControlName="confPass" placeholder="" id="confPass" [(ngModel)]="confPas" id="confPass" name="string" />
+
+          <!---error message-->
+          <div *ngIf=" submitted && confmPass.invalid && (confmPass.touched || confmPass.dirty) ">
+
+            <span class="alert" *ngIf="confmPass.errors?.required">*Confirm password is required</span>
+
+          </div>    
+
+
+        <button type="button"  class="signUP-btn" value="Submit" >Submit</button>
+
+
+      </form>
+
+     <p>
+        Already have an account? <a href="user-login">Login here</a>
+      </p>
+    </div>
+
+  </body>
+</html>
