@@ -29,9 +29,11 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
-            
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/ckeditor.js",
+              "https://cdn.ckeditor.com/4.17.1/full-all/ckeditor.js"
+            ]
           },
           "configurations": {
             "production": {
