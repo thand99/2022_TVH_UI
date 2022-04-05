@@ -11,12 +11,14 @@
       <h1>Sign Up</h1>
       <h4>Please fill in this form to create an account</h4>
 
-      <form #regForm="ngForm" [formGroup]="signupForm" (ngSubmit)="clickhandle()" >
+      <form #regForm="ngForm" (ngSubmit)="clickhandle()" [formGroup]="signupForm"   >
+
+        
 
         {{regForm.submitted}} 
 
         <label>First Name</label>
-        <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="name" id="names" name="name" namesControl="ngModel"/>
+        <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="name" id="name" name="names" namesControl="ngModel"/>
 
                   <!---error message-->
                   <div *ngIf=" submitted && namess.invalid && (namess.touched || namess.dirty)"   >
@@ -26,7 +28,7 @@
                  </div>
 
         <label>Last Name</label>
-        <input type="text" formControlName="surname" class="surname"  placeholder="Enter your last name" required [(ngModel)]="surnam" id="surname" name="surname" namesControl="ngModel" />
+        <input type="text" formControlName="surname" class="surname"  placeholder="Enter your last name" required [(ngModel)]="surnam" id="surnam" name="surname" namesControl="ngModel" />
 
                   <!---error message-->
                   <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
@@ -36,7 +38,7 @@
                 </div>
 
         <label>Email</label>
-        <input type="email" placeholder="" formControlName="email" placeholder="Enter username or email" id="email" [(ngModel)]="emal" id="stud_email" name="string" email="true" />
+        <input type="email" formControlName="email" placeholder="Enter username or email" required id="emal" [(ngModel)]="emal" name="email" email="true" namesControl="ngModel"/>
 
            <!---error message-->
            <div *ngIf=" submitted && emails.invalid && (emails.touched || emails.dirty)" >
@@ -46,7 +48,7 @@
             </div>
 
         <label>Password</label>
-        <input type="password" formControlName="password" placeholder="Enter password"  id="password" [(ngModel)]="passwrd" id="password" name="string"/>
+        <input type="password" formControlName="password" placeholder="Enter password" required id="passwrd" [(ngModel)]="passwrd" name="password" namesControl="ngModel"/>
 
                 <!---error message-->
                 <div *ngIf="submitted && passwords.invalid && (passwords.touched || passwords.dirty)" >
@@ -56,7 +58,7 @@
               </div>
 
         <label>Confirm Password</label>
-        <input type="password" formControlName="confPass" placeholder="" id="confPass" [(ngModel)]="confPas" id="confPass" name="string" />
+        <input type="password" formControlName="confPass" placeholder="Please enter password" required id="confPas" [(ngModel)]="confPas" name="confPass" namesControl="ngModel" />
 
           <!---error message-->
           <div *ngIf=" submitted && confmPass.invalid && (confmPass.touched || confmPass.dirty) ">
@@ -66,7 +68,7 @@
           </div>    
 
 
-        <button type="button"  class="signUP-btn" value="Submit" >Submit</button>
+        <button type="button" class="signUP-btn"  >Submit</button>
 
 
       </form>

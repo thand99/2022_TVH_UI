@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiserviceService} from '../apiservice.service';
 import { Router } from '@angular/router';
 import {ReactiveFormsModule, FormsModule, Validators, FormGroup, FormControl, FormBuilder} from '@angular/forms';
+import {  EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sign-up',
@@ -34,11 +35,11 @@ export class SignUpComponent implements OnInit {
 
 
 
- public names :string =''
- public surname:string =''
- public email:string =''
- public password:string =''
- public confPass:string =''
+ public name :string =''
+ public surnam:string =''
+ public emal:string =''
+ public passwrd:string =''
+ public confPas:string =''
 
 
 
@@ -53,6 +54,12 @@ export class SignUpComponent implements OnInit {
 
  clickhandle()
  {
+
+      console.log("im here");
+       console.log(this.name);
+       console.log(this.surnam);
+       console.log(this.emal);
+       console.log(this.passwrd);
 
    this.submitted = true;
 
@@ -75,19 +82,19 @@ export class SignUpComponent implements OnInit {
      console.log(this.hold);
      console.log('valid');
 
-     this.service.getSignup({"fullName":this.names, "lastName":this.surname, "emailAddress":this.email , "password":this.password  }).subscribe((res)=>{
-      console.log(this.names);
-       console.log(this.surname);
-       console.log(this.email);
-       console.log(this.password);
+     this.service.getSignup({"fullName":this.name, "lastName":this.surnam, "emailAddress":this.emal , "password":this.passwrd  }).subscribe((res)=>{
+      console.log(this.name);
+       console.log(this.surnam);
+       console.log(this.emal);
+       console.log(this.passwrd);
 
        if(res.message =="Application Successfully submited")
        {
            alert(res.message);
            this.signupForm.reset();
            this.route.navigate(["home"])
-       }
-       else{
+      }
+      else{
          alert(res.message);
        }
         
@@ -102,3 +109,6 @@ export class SignUpComponent implements OnInit {
  }
 
 }
+
+
+ 
