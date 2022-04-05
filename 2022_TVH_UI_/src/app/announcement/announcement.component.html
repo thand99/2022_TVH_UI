@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Announcement</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h6>ANNOUNCEMENTS</h6>
+        </div>
+
+            <label>Title:</label>
+                <input type="text" class="art-title" name="Article_title" id="title" placeholder="Add Title" autocomplete="off">
+                <br>
+                <br>
+                    <ckeditor
+                        [(ngModel)]="ckeditorContent">
+                    </ckeditor>
+                <br>
+            <button  type="button" name="upload_data" value="publish">Upload</button>
+        
+
+        <!--
+
+
+        
+            CKEDITOR.plugins.addExternal('timestamp', 'https://ckeditor.com/docs/ckeditor4/4.18.0/examples/assets/plugins/timestamp/', 'plugin.js');
+
+           CKEDITOR.replace('Article_content',{
+            extraPlugins: 'timestamp'
+           });
+        </script>
+        -->
+        
+
+        
+
+    </body>
+</html>
