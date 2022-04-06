@@ -16,6 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { AdminAnnouncementsComponent } from './admin-announcements/admin-announcements.component';
 
 
 
@@ -33,6 +34,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     LandingPageComponent,
     UserLoginComponent,
     SignUpComponent,
+    AdminAnnouncementsComponent,
 
 
 
@@ -43,6 +45,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     BrowserAnimationsModule,
     FontAwesomeModule,
     MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

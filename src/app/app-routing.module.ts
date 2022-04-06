@@ -15,6 +15,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
+
 const routes: Routes = [
   {path: "",component:LandingPageComponent},
   {path: "home",component:HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: "login-form", component:LoginFormComponent},
   {path: "user-login",component:UserLoginComponent},
   {path: "sign-up", component:SignUpComponent}
+
 
 
 ];

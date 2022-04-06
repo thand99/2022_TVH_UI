@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <title>Sign Up </title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
 
@@ -9,17 +14,29 @@
       <h1>Sign Up</h1>
       <h4>Please fill in this form to create an account</h4>
 
+
+
       <form>
+
+
+        <span> <label for="User">Type of user:</label></span>
+        <select name="User" id="User">
+        <option value="">Choose option</option>
+        <option value="Student">Student</option>
+        <option value="Mentor">Mentor</option>
+        <option value="Visitor">Guests</option>
+      </select>
         <label>First Name</label>
-        <input type="text" placeholder="" />
+        <input type="text" placeholder="Enter your first name" />
         <label>Last Name</label>
-        <input type="text" placeholder="" />
+        <input type="text" placeholder="Enter your last name" />
         <label>Email</label>
-        <input type="email" placeholder="" />
+        <input type="email" placeholder="Enter your email" />
         <label>Password</label>
-        <input type="password" placeholder="" />
+        <input type="password" placeholder="Enter your password" />
         <label>Confirm Password</label>
-        <input type="password" placeholder="" />
+        <input type="password" placeholder="Confirm your password" />
+
         <button type="button"  class="signUP-btn" >Submit</button>
 
 
