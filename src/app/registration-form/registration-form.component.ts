@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 import {ReactiveFormsModule, FormsModule, Validators, FormGroup, FormControl, FormBuilder} from '@angular/forms';
 import {  EventEmitter, Input, Output } from '@angular/core';
 
-
-
+///for drop down
 interface institutess {
   value: string;
   viewValue: string;
@@ -105,6 +104,7 @@ export class RegistrationFormComponent implements OnInit {
   public academicRecord:string =''
   public  mNumber:string =''
   public skills:string =''
+  
 
  
 
@@ -177,7 +177,7 @@ export class RegistrationFormComponent implements OnInit {
         console.log(this.skills);
         console.log(res.message);
 
-        if(res.message =="Application Successfully submited")
+        if(res.message =="Application Successfully submited, NB:PLEASE CHECK YOUR EMAIL TO CONFIRM YOUR EMAIL")
         {
             alert(res.message);
             this.registerForm.reset();

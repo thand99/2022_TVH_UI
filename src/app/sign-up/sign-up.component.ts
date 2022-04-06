@@ -4,6 +4,13 @@ import { Router } from '@angular/router';
 import {ReactiveFormsModule, FormsModule, Validators, FormGroup, FormControl, FormBuilder} from '@angular/forms';
 import {  EventEmitter, Input, Output } from '@angular/core';
 
+
+///for drop down
+interface userss {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -16,6 +23,14 @@ export class SignUpComponent implements OnInit {
 
   constructor(private service:ApiserviceService, private route:Router, private formBuilder: FormBuilder) { }
 
+
+  users: userss[] = [
+    {value: 'Mentor', viewValue: 'Mentor'},
+    {value: 'Guest', viewValue: 'Guest'},
+    {value: 'Student', viewValue: 'Student'},
+    {value: 'Sponsor', viewValue: 'Sponsor'}
+  ];
+
   ngOnInit(): void {
 
 
@@ -26,6 +41,7 @@ export class SignUpComponent implements OnInit {
       "email": new FormControl(null, [Validators.required, Validators.email]),///
       "password": new FormControl(null,[Validators.required, Validators.minLength(6), Validators.pattern('[a-zA-z]*')]),
       "confPass": new FormControl(null,Validators.required ),
+      "Usere": new FormControl(null,Validators.required )
     })
   }
 
@@ -40,6 +56,7 @@ export class SignUpComponent implements OnInit {
  public emal:string =''
  public passwrd:string =''
  public confPas:string =''
+ public userr:string =''
 
 
 
@@ -48,6 +65,7 @@ export class SignUpComponent implements OnInit {
  get emails(){return this.signupForm.get('email');}
  get passwords(){return this.signupForm.get('password');}
  get confmPass(){return this.signupForm.get('confPass');}
+ get useres(){return this.signupForm.get('usere');}
 
 
  get f(){return this.signupForm.controls}

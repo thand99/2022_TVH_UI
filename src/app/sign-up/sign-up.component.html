@@ -11,10 +11,29 @@
       <h1>Sign Up</h1>
       <h4>Please fill in this form to create an account</h4>
 
+
       <form #regForm="ngForm" (ngSubmit)="clickhandle()" [formGroup]="signupForm"   >
 
-        
+        <span> <label for="User">Type of user:</label></span>
 
+
+   
+        <select formControlName="Usere"  name="User" id="User" required  [(ngModel)]="userr" id="institutes">
+          <option disabled value="choose">Choose Option</option>
+          <option  *ngFor="let userss of users" [value]="userss.value">
+            {{userss.viewValue}}</option>
+
+
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && useres.invalid && (useres.touched || useres.dirty)" >
+                                              <span class="alert" *ngIf="useres.errors?.required">*Institution is required</span>
+                                         </div>
+
+       </select>
+
+        
+        <br>
+        <br>
         {{regForm.submitted}} 
 
         <label>First Name</label>
@@ -30,12 +49,13 @@
         <label>Last Name</label>
         <input type="text" formControlName="surname" class="surname"  placeholder="Enter your last name" required [(ngModel)]="surnam" id="surnam" name="surname" namesControl="ngModel" />
 
-                  <!---error message-->
-                  <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
-                    <span class="alert" *ngIf="surnames.errors?.required">*Last name is required</span>
-                    <span class="alert" *ngIf="surnames.errors?.pattern">*Enter only characters</span>
+          <!---error message-->
+          <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
+            <span class="alert" *ngIf="surnames.errors?.required">*Surname is required</span>
+            <span class="alert" *ngIf="surnames.errors?.pattern">*Enter only characters</span>
 
-                </div>
+         </div>
+
 
         <label>Email</label>
         <input type="email" formControlName="email" placeholder="Enter username or email" required id="emal" [(ngModel)]="emal" name="email" email="true" namesControl="ngModel"/>
@@ -46,6 +66,8 @@
             <span class="alert" *ngIf="emails.errors?.email">*Enter valid email address</span>
            
             </div>
+
+ 
 
         <label>Password</label>
         <input type="password" formControlName="password" placeholder="Enter password" required id="passwrd" [(ngModel)]="passwrd" name="password" namesControl="ngModel"/>
@@ -68,7 +90,7 @@
           </div>    
 
 
-        <button type="button" class="signUP-btn"  >Submit</button>
+        <button type="submit" class="signUP-btn"  >Submit</button>
 
 
       </form>
