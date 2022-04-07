@@ -20,64 +20,96 @@ export class SignUpComponent implements OnInit {
 
 
   submitted: boolean = false;
+ 
 
   constructor(private service:ApiserviceService, private route:Router, private formBuilder: FormBuilder) { }
 
 
   users: userss[] = [
-    {value: 'Mentor', viewValue: 'Mentor'},
-    {value: 'Guest', viewValue: 'Guest'},
     {value: 'Student', viewValue: 'Student'},
-    {value: 'Sponsor', viewValue: 'Sponsor'}
+    {value: 'Visitor', viewValue: 'Visitor'}
+
   ];
 
   ngOnInit(): void {
 
+    
 
     this.signupForm = new FormGroup({
 
-      "names": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),///
-      "surname": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
+      "name": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),///
+      "surnamee": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
       "email": new FormControl(null, [Validators.required, Validators.email]),///
-      "password": new FormControl(null,[Validators.required, Validators.minLength(6), Validators.pattern('[a-zA-z]*')]),
-      "confPass": new FormControl(null,Validators.required ),
+      "passwordi": new FormControl(null,[Validators.required, Validators.minLength(6), Validators.pattern('[a-zA-z]*')]),
+      "confPass": new FormControl(null,[Validators.required] ),
       "Usere": new FormControl(null,Validators.required )
+    },
+    {
+        validators:<any> this.MustMatch('passwordi','confPass')
+
     })
   }
+
+
+  MustMatch(controlName:string, matchingControlName: string){
+
+    return(FormGroup:FormGroup) =>{
+
+
+      const control = FormGroup.controls[controlName];
+      const matchingControl = FormGroup.controls[matchingControlName];
+
+      if(matchingControl.errors && !matchingControl.errors['MustMatch']){
+
+        return
+      }
+      if(control.value !== matchingControl.value)
+      { 
+        matchingControl.setErrors({MustMatch:true})
+      }
+      else{
+
+        matchingControl.setErrors(null)
+      }
+    } 
+  }
+
 
 
  signupForm:any;
  public hold :string =''
 
+ 
 
-
- public name :string =''
- public surnam:string =''
+ public names :string =''
+ public surname:string =''
  public emal:string =''
- public passwrd:string =''
+ public password:string =''
  public confPas:string =''
  public userr:string =''
 
 
 
- get namess(){return this.signupForm.get('names');}
- get surnames(){return this.signupForm.get('surname');}
+ get namess(){return this.signupForm.get('name');}
+ get surnames(){return this.signupForm.get('surnamee');}
  get emails(){return this.signupForm.get('email');}
- get passwords(){return this.signupForm.get('password');}
+ get passwords(){return this.signupForm.get('passwordi');}
  get confmPass(){return this.signupForm.get('confPass');}
  get useres(){return this.signupForm.get('usere');}
 
 
  get f(){return this.signupForm.controls}
 
+
  clickhandle()
  {
 
       console.log("im here");
-       console.log(this.name);
-       console.log(this.surnam);
+       console.log(this.names);
+       console.log(this.surname);
        console.log(this.emal);
-       console.log(this.passwrd);
+       console.log(this.password);
+       console.log(this.confPas);
 
    this.submitted = true;
 
@@ -87,39 +119,19 @@ export class SignUpComponent implements OnInit {
    if(this.signupForm.invalid)
    {
     // this.hold = this.registerForm.invalid;
-     console.log(this.hold);
+     //console.log(this.hold);
      console.log('invalid');
-
      
-     return;
-   }else 
-   {
+   
+   }else
+    {
 
-     //this.hold = this.registerForm.valid;
 
-     console.log(this.hold);
-     console.log('valid');
 
-     this.service.getSignup({"fullName":this.name, "lastName":this.surnam, "emailAddress":this.emal , "password":this.passwrd  }).subscribe((res)=>{
-      console.log(this.name);
-       console.log(this.surnam);
-       console.log(this.emal);
-       console.log(this.passwrd);
+      console.log(this.hold);
+      console.log('valid');
 
-       if(res.message =="Application Successfully submited")
-       {
-           alert(res.message);
-           this.signupForm.reset();
-           this.route.navigate(["home"])
-      }
-      else{
-         alert(res.message);
-       }
-        
-
-      });
-     
-   }
+    }
 
    
 

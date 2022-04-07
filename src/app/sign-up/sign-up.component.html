@@ -13,31 +13,17 @@
 
 
       <form #regForm="ngForm" (ngSubmit)="clickhandle()" [formGroup]="signupForm"   >
-
-        <span> <label for="User">Type of user:</label></span>
-
-
-   
-        <select formControlName="Usere"  name="User" id="User" required  [(ngModel)]="userr" id="institutes">
-          <option disabled value="choose">Choose Option</option>
-          <option  *ngFor="let userss of users" [value]="userss.value">
-            {{userss.viewValue}}</option>
-
-
-                                            <!---error message-->
-                                            <div *ngIf=" submitted && useres.invalid && (useres.touched || useres.dirty)" >
-                                              <span class="alert" *ngIf="useres.errors?.required">*Institution is required</span>
-                                         </div>
-
-       </select>
-
         
         <br>
         <br>
         {{regForm.submitted}} 
 
+
+
+       
+
         <label>First Name</label>
-        <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="name" id="name" name="names" namesControl="ngModel"/>
+        <input type="text" formControlName="name"  class="name" placeholder="Enter your full names" required [(ngModel)]="names" id="name" name="name" namesControl="ngModel"/>
 
                   <!---error message-->
                   <div *ngIf=" submitted && namess.invalid && (namess.touched || namess.dirty)"   >
@@ -47,7 +33,7 @@
                  </div>
 
         <label>Last Name</label>
-        <input type="text" formControlName="surname" class="surname"  placeholder="Enter your last name" required [(ngModel)]="surnam" id="surnam" name="surname" namesControl="ngModel" />
+        <input type="text" formControlName="surnamee" class="name"  placeholder="Enter your last name" required [(ngModel)]="surname" id="surnamee" name="surnamee" namesControl="ngModel" />
 
           <!---error message-->
           <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
@@ -58,7 +44,7 @@
 
 
         <label>Email</label>
-        <input type="email" formControlName="email" placeholder="Enter username or email" required id="emal" [(ngModel)]="emal" name="email" email="true" namesControl="ngModel"/>
+        <input type="email" formControlName="email" placeholder="Enter username or email"   [(ngModel)]="emal" id="email" name="email" email="true"/>
 
            <!---error message-->
            <div *ngIf=" submitted && emails.invalid && (emails.touched || emails.dirty)" >
@@ -67,10 +53,9 @@
            
             </div>
 
- 
 
         <label>Password</label>
-        <input type="password" formControlName="password" placeholder="Enter password" required id="passwrd" [(ngModel)]="passwrd" name="password" namesControl="ngModel"/>
+        <input type="password" formControlName="passwordi" placeholder="Enter password" [(ngModel)]="password"  id="password" name="password" namesControl="ngModel"  />
 
                 <!---error message-->
                 <div *ngIf="submitted && passwords.invalid && (passwords.touched || passwords.dirty)" >
@@ -80,15 +65,16 @@
               </div>
 
         <label>Confirm Password</label>
-        <input type="password" formControlName="confPass" placeholder="Please enter password" required id="confPas" [(ngModel)]="confPas" name="confPass" namesControl="ngModel" />
+        <input type="password" formControlName="confPass" placeholder="confirm enter password"   [(ngModel)]="confPas" id="confPass"  name="confPass"  namesControl="ngModel" />
 
           <!---error message-->
           <div *ngIf=" submitted && confmPass.invalid && (confmPass.touched || confmPass.dirty) ">
 
             <span class="alert" *ngIf="confmPass.errors?.required">*Confirm password is required</span>
+            <span class="alert" *ngIf="confmPass.errors?.MustMatch">*Confirm password does not match with the password</span>
 
-          </div>    
-
+          </div> 
+          
 
         <button type="submit" class="signUP-btn"  >Submit</button>
 

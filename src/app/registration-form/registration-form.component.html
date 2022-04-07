@@ -82,14 +82,14 @@
                     <option disabled value="choose">Choose Option</option>
                     <option  *ngFor="let institutess of institutes" [value]="institutess.value">
                         {{institutess.viewValue}}</option>
-                    
+                 </select>    
                                             <!---error message-->
                                             <div *ngIf=" submitted && institutess.invalid && (institutess.touched || institutess.dirty)" >
                                                 <span class="alert" *ngIf="institutess.errors?.required">*Institution is required</span>
                                            </div>
                    
 
-                </select>
+               
                 <p>Upload Academic Record</p>
                <input type="file" formControlName="academic" class="browser"  [(ngModel)]="academicRecord" id="academic" name="academic">
 
@@ -118,13 +118,13 @@
                     <option   value="choose">Choose Option</option>
                     <option *ngFor="let skillss of skill" [value]="skillss.value">
                         {{skillss.viewValue}}</option>
-
+                    </select>
                         <div *ngIf=" submitted && skil.invalid && (skil.touched || skil.dirty)" >
                             <span class="alert" *ngIf="skil.errors?.required">*Skills is required</span>
                             
         
                          </div>
-                </select>
+                
 
 
                 <button  type="submit"   class="submit-btn"  value="Submit">Submit</button>
