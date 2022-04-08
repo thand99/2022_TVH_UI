@@ -9,14 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
-import { AdminComponent } from './admin/admin.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginFormComponent } from './login-form/login-form.component';
 import {MatButtonModule} from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { AdminAnnouncementsComponent } from './admin-announcements/admin-announcements.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 
 
@@ -29,12 +29,12 @@ import { AdminAnnouncementsComponent } from './admin-announcements/admin-announc
     RewardsComponent,
     GalleryComponent,
     RegistrationFormComponent,
-    AdminComponent,
     LoginFormComponent,
     LandingPageComponent,
     UserLoginComponent,
     SignUpComponent,
-    AdminAnnouncementsComponent,
+    AdminDashboardComponent,
+
 
 
 
