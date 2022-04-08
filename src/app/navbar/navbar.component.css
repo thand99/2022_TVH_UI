@@ -1,0 +1,76 @@
+.sidenav-container {
+  height: 100%;
+
+}
+
+.sidenav {
+  width: 200px;
+  background: #013b92;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  color:#fff;
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  height: 17vh;
+  top: 0;
+  z-index: 1;
+  background: #013b92;
+}
+.mat-list-item{
+  color: #fff;
+  font-size: 15px;
+
+}
+h1{
+  margin: 50px;
+}
+span{
+  margin-left: 20px;
+}
+.mat-icon{
+  color: #fff;
+  font-size: 20px;
+  margin: 5px;
+}
+img{
+  background: #fff;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 68px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+span .mat-icon{
+  font-size: 40px;
+  position: absolute;
+  right: 15%;
+  top: 25%;
+}
+.btn{
+  color: #000;
+  font-size: 13px;
+  background: #fff;
+  position: absolute;
+  right: 5%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: .6s ease-in-out;
+}
+.btn:hover{
+  background: #ff0000;
+  color: #fff;
+  cursor: pointer;
+}
