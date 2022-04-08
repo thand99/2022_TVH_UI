@@ -18,39 +18,50 @@ interface userss {
 })
 export class SignUpComponent implements OnInit {
 
-
   submitted: boolean = false;
- 
 
-  constructor(private service:ApiserviceService, private route:Router, private formBuilder: FormBuilder) { }
+  constructor(private service:ApiserviceService, private route:Router, private formBuilder: FormBuilder) {
+
+    this.signupForm = new FormGroup({
+
+      name: new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
+      surname: new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
+      email: new FormControl(null, [Validators.required, Validators.email]),///
+      passwordi: new FormControl(null,[Validators.required, Validators.minLength(6), Validators.pattern('[a-zA-z]*')]), ///
+      confPass: new FormControl(' ',[Validators.required] )
+      
+    },
+    {
+        validators:<any> this.MustMatch('passwordi','confPass')
+        
+  
+    })
+
+   }
 
 
+//DropDownList
   users: userss[] = [
     {value: 'Student', viewValue: 'Student'},
     {value: 'Visitor', viewValue: 'Visitor'}
 
   ];
 
+
+  
+
   ngOnInit(): void {
 
+
     
-
-    this.signupForm = new FormGroup({
-
-      "name": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),///
-      "surnamee": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
-      "email": new FormControl(null, [Validators.required, Validators.email]),///
-      "passwordi": new FormControl(null,[Validators.required, Validators.minLength(6), Validators.pattern('[a-zA-z]*')]),
-      "confPass": new FormControl(null,[Validators.required] ),
-      "Usere": new FormControl(null,Validators.required )
-    },
-    {
-        validators:<any> this.MustMatch('passwordi','confPass')
-
-    })
   }
 
+  myform!:FormGroup;
 
+//for inside of ngOnInit
+  signupForm:any;
+
+  ///For validating confirm password(Not working yet)
   MustMatch(controlName:string, matchingControlName: string){
 
     return(FormGroup:FormGroup) =>{
@@ -76,69 +87,61 @@ export class SignUpComponent implements OnInit {
 
 
 
- signupForm:any;
- public hold :string =''
 
+
+  ///Local Variables
+  public names:string=''
+  public surnam:string=''
+  public emal:string=''
+  public password:string=''
+  public confirmPassword: string=''
+
+
+  ////Get Functions
+ 
+  get namess(){return this.signupForm.get('name');}
+  get surnamess(){return this.signupForm.get('surname');}
  
 
- public names :string =''
- public surname:string =''
- public emal:string =''
- public password:string =''
- public confPas:string =''
- public userr:string =''
+
+  get f (){return this.signupForm?.controls}
 
 
+  clickhandle()
+  {
+    
 
- get namess(){return this.signupForm.get('name');}
- get surnames(){return this.signupForm.get('surnamee');}
- get emails(){return this.signupForm.get('email');}
- get passwords(){return this.signupForm.get('passwordi');}
- get confmPass(){return this.signupForm.get('confPass');}
- get useres(){return this.signupForm.get('usere');}
+    this.submitted = true;
 
-
- get f(){return this.signupForm.controls}
-
-
- clickhandle()
- {
-
-      console.log("im here");
-       console.log(this.names);
-       console.log(this.surname);
-       console.log(this.emal);
-       console.log(this.password);
-       console.log(this.confPas);
-
-   this.submitted = true;
-
-   
-   
-
-   if(this.signupForm.invalid)
-   {
-    // this.hold = this.registerForm.invalid;
-     //console.log(this.hold);
-     console.log('invalid');
-     
-   
-   }else
+    if(this.password !== this.confirmPassword)
     {
-
-
-
-      console.log(this.hold);
-      console.log('valid');
+      console.log('Invalid')
+      alert("Password does not match, Make sure the password match");
+      return;
 
     }
+    else{
+      console.log('valid')
+      
 
-   
+    }
+/*
+    if(this.signupForm.invalid)
+    {
+      console.log('Invalid')
+      return;
+    }
+    
+    if(this.signupForm.valid)
+    {
+      console.log('Valid')
+    }
 
+*/
 
- }
+  }
 
 }
 
 
- 
+

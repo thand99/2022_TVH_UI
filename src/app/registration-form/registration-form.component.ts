@@ -20,6 +20,11 @@ interface skillss {
   viewValue: string;
 }
 
+interface levels {
+  value: string;
+  viewValue: string;
+}
+
 
 @Component({
   selector: 'app-registration-form',
@@ -49,10 +54,10 @@ export class RegistrationFormComponent implements OnInit {
  // registerForm!: FormGroup;
 
   institutes: institutess[] = [
-    {value: 'tut', viewValue: 'Tshwane University Of Technology'},
-    {value: 'up', viewValue: 'University Pretoria'},
-    {value: 'smu', viewValue: 'Sefako Makgatho University'},
-    {value: 'unisa', viewValue: 'Unisa'}
+    {value: 'Faculty Of Information And Communication Technology', viewValue: 'Faculty Of Information And Communication Technology'},
+    {value: 'Faculty Of Management Sciences', viewValue: 'Faculty Of Management Sciences'},
+    {value: 'Faculty Of Arts And Design', viewValue: 'Faculty Of Arts And Design'},
+  
   ];
 
   genders: genders[] = [
@@ -62,12 +67,21 @@ export class RegistrationFormComponent implements OnInit {
   ];
 
     skill: skillss[] = [
-    {value: 'An', viewValue: 'Analyst'},
-    {value: 'Prgm', viewValue: 'Programmer'},
-    {value: 'Graphics', viewValue: 'Graphic designer'},
-    {value: 'Maketr', viewValue: 'Marketer'},
+    {value: 'Analyst', viewValue: 'Analyst'},
+    {value: 'Frontend Developer', viewValue: 'Frontend Developer'},
+    {value: 'Backend Developer', viewValue: 'Backend Developer'},
+    {value: 'Marketer', viewValue: 'Marketer'},
+    {value: 'Graphic designer', viewValue: 'Graphic designer'},
+
+    
     
 
+  ];
+  level: levels[] = [
+    {value: 'First Year', viewValue: 'First Year'},
+    {value: 'Second Year', viewValue: 'Second Year'},
+    {value: 'Final Year', viewValue: 'Final Year'},
+ 
   ];
  
  
@@ -80,12 +94,15 @@ export class RegistrationFormComponent implements OnInit {
 
       "names": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),///
       "surname": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
+      "hobby": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
+      "special": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-z]*')]),
       "genders": new FormControl(null,Validators.required ),
       "dates": new FormControl(null,Validators.required ),
       "email": new FormControl(null, [Validators.required, Validators.email]),///
       "institutes": new FormControl(null,Validators.required ),
       "academic": new FormControl(null,Validators.required ),
       "skill": new FormControl(null,Validators.required ),
+      "level": new FormControl(null,Validators.required ),
       "mobileNumber": new FormControl(null,[Validators.required, Validators.pattern('[0-9]*')] ),
     })
   }
@@ -104,6 +121,9 @@ export class RegistrationFormComponent implements OnInit {
   public academicRecord:string =''
   public  mNumber:string =''
   public skills:string =''
+  public leve:string =''
+  public spec:string =''
+  public hob:string =''
   
 
  
@@ -126,6 +146,11 @@ export class RegistrationFormComponent implements OnInit {
   get academicss(){return this.registerForm.get('academic');}
   get mobilenumber(){return this.registerForm.get('mobileNumber');}
   get skil(){return this.registerForm.get('skill');}
+  get lev(){return this.registerForm.get('level');}
+  get specs(){return this.registerForm.get('special');}
+  get hobs(){return this.registerForm.get('hobby');}
+  
+
  
 
  
