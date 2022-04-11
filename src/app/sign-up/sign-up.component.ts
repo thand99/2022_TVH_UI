@@ -112,6 +112,7 @@ export class SignUpComponent implements OnInit {
     
 
     this.submitted = true;
+   
 
     if(this.password !== this.confirmPassword)
     {
@@ -122,6 +123,35 @@ export class SignUpComponent implements OnInit {
     }
     else{
       console.log('valid')
+
+      //name, surname, email, password
+
+      this.service.getSignup({"name":this.names,"surname":this.surnam,"email":this.emal,"password":this.password }).subscribe((res)=>{
+
+
+
+       if( res.message == "User signed Up successfully✔✔✔") 
+       {
+          alert("Your signup is successfull, NB: PLEASE CHECK YOUR EMAIL TO CONFIRM YOUR EMAIL");
+          this.signupForm.reset();
+          this.route.navigate(["user-login"])
+       }
+       else if(res.message == "Email already signed up!!!")
+       {
+         alert("Email already exist use another one");
+       }
+       else if(res.message == "Problem with table!!!!")
+       {
+         alert("There is Problem with table!!!!");
+       }
+       else if(res.message == "Unable to signup!!!")
+       {
+         alert("Unable to signup!!!");
+       }
+
+
+
+      });
       
 
     }

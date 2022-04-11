@@ -21,6 +21,16 @@
                 </div>
 
 
+                <p>Student Number</p>
+                <input type="text" formControlName="studentNumber"  class="stud" placeholder="Enter your full names" required [(ngModel)]="student" id="stud" name="studentNumber" namesControl="ngModel">
+                
+          <!---error message-->
+          <div *ngIf=" studentNumbers.invalid && (studentNumbers.touched || studentNumbers.dirty)"   >
+            <span class="alert" *ngIf="submitted && studentNumbers.errors?.required">*Student number is required</span>
+            <span class="alert" *ngIf="studentNumbers.errors?.pattern">*Enter only numbers</span>
+
+         </div>
+
                 <p>Full Names</p>
                 <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="names" id="names" name="name" namesControl="ngModel">
                 
@@ -76,10 +86,23 @@
                     <span class="alert" *ngIf="emails.errors?.email">*Enter valid email address</span>
 
                  </div>
+
+                 <p>Campus</p>
+                 <br>
+                 <select class="your-insti" formControlName="campuses" name="institutes" required [(ngModel)]="campus"  id="institutes">
+                     <option disabled value="choose">Choose Option</option>
+                     <option  *ngFor="let camp of camps" [value]="camp.value">
+                        {{camp.viewValue}}</option>
+                 </select>
+
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && campusess.invalid && (campusess.touched || campusess.dirty)" >
+                                                <span class="alert" *ngIf="campusess.errors?.required">*Campus is required</span>
+                                           </div>
                 
-                <p>Campus</p>
+                <p>Faculty</p>
                 <br>
-                <select  class="your-insti" formControlName="institutes" name="institutes" required  [(ngModel)]="institute" id="institutes">
+                <select  class="your-insti" formControlName="institutes" name="institutes" required  [(ngModel)]="facult" id="institutes">
                   
                     <option disabled value="choose">Choose Option</option>
                     <option  *ngFor="let institutess of institutes" [value]="institutess.value">
@@ -87,7 +110,7 @@
                  </select>    
                                             <!---error message-->
                                             <div *ngIf=" submitted && institutess.invalid && (institutess.touched || institutess.dirty)" >
-                                                <span class="alert" *ngIf="institutess.errors?.required">*Campus is required</span>
+                                                <span class="alert" *ngIf="institutess.errors?.required">*Faculty is required</span>
                                            </div>
 
                 <p>Specialization</p>
@@ -137,18 +160,21 @@
                     <span class="alert" *ngIf="lev.errors?.required">*Level is required</span>
                     
 
-            </div>
+             </div>
+            
+             
+             <p>Hobby</p>
+             <input type="text" formControlName="hobby"  class="email" placeholder="State your hobby" required [(ngModel)]="hob">
+
+       <!---error message-->
+       <div *ngIf=" submitted && hobs.invalid && (hobs.touched || hobs.dirty)" >
+         <span class="alert" *ngIf="hobs.errors?.required">*Hobby is required</span>
+         <span class="alert" *ngIf="hobs.errors?.pattern">*Enter only characters</span>
+
+      </div>
 
 
-                <p>Hobby</p>
-                <input type="text" formControlName="hobby"  class="email" placeholder="State your hobby" required [(ngModel)]="hob">
 
-          <!---error message-->
-          <div *ngIf=" submitted && hobs.invalid && (hobs.touched || hobs.dirty)" >
-            <span class="alert" *ngIf="hobs.errors?.required">*Hobby is required</span>
-            <span class="alert" *ngIf="hobs.errors?.pattern">*Enter only characters</span>
-
-         </div>
                 
 
 

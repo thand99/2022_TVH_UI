@@ -41,18 +41,19 @@ export class UserLoginComponent implements OnInit {
 
   clickhandle(){
 
-    this.service.getAllData({"emal":this.emal, "passw": this.password }).subscribe((res)=>{
+    this.service.getLogin({"email":this.emal, "password": this.passw }).subscribe((res)=>{
        
-      console.log(res.message);
+     
 
-      if(res.message =="login Successful")
+      if(res.message =="User sucessfully signed In✔✔✔")
       {
-        
-          this.route.navigate(["adminboard"])
+        console.log("im here");
+        alert("You successfully loged in..")
+        this.route.navigate(["home"])
       }
-      else{
-
-        alert(res.message);
+      else 
+      {
+        alert("Please check your email or password is incorrect");
       }
     });
     

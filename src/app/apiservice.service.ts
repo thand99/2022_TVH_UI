@@ -24,7 +24,7 @@ export class ApiserviceService {
 
     apaUrl = 'http://localhost:9002/signUp'; /// Signup for users
 
-    apkUrl = 'http://localhost:9002/userLogin'; /// Signup for users
+    apkUrl = 'http://localhost:9002/userLogin'; /// Users login
 
 
 

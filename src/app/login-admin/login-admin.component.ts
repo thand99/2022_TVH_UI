@@ -48,14 +48,15 @@ export class LoginAdminComponent implements OnInit {
 
   clickhandle(){
 
-    this.service.getAllData({"emal":this.emal, "passw": this.password }).subscribe((res)=>{
+    this.service.getAllData({"admin_email":this.emal, "admin_password": this.password }).subscribe((res)=>{
        
       console.log(res.message);
 
       if(res.message =="login Successful")
       {
-        
+        //alert("You are successful loged in")
           this.route.navigate(["adminboard"])
+          
       }
       else{
 
