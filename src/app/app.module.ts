@@ -26,6 +26,9 @@ import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { ParticipantComponent } from './participant/participant.component';
+import { AnnoucementComponent } from './annoucement/annoucement.component';
+import { RewardComponent } from './reward/reward.component';
 
 
 
@@ -49,6 +52,9 @@ import { MatMenuModule } from '@angular/material/menu';
     NavbarComponent,
     LayoutComponent,
     DashbaordComponent,
+    ParticipantComponent,
+    AnnoucementComponent,
+    RewardComponent,
 
 
 

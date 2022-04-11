@@ -56,16 +56,21 @@ h1{
   flex-direction: column;
   width: 160px;
   height: 140px;
-  margin: 10px;
+  margin-top: 60px;
+  box-shadow: 2px 3px 10px rgb(0, 6, 92);
   align-items: center;
   text-align: justify;
   border-radius: 20px;
   padding: 10px;
   background: #fff;
   background-size: 100% 200%;
+  transition: 1s;
+}
+.box:hover{
+  transform:scale(1.1);
 }
 .box img{
-  margin: 5px;
+  margin: 20px;
   transition: 1s;
 }
 .box img:hover{

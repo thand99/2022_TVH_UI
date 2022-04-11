@@ -10,6 +10,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ParticipantComponent } from './participant/participant.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: "login-form", component:LoginFormComponent},
   {path: "user-login",component:UserLoginComponent},
   {path: "sign-up", component:SignUpComponent},
-  {path: "layout", component:LayoutComponent}
+  {path: "layout", component:LayoutComponent},
+  {path: "participant",component:ParticipantComponent}
 
 
 
