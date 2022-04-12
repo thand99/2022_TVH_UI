@@ -1,1 +1,36 @@
-<p>annoucement works!</p>
+<app-sidebar></app-sidebar>
+<mat-card class='my-5 mat-elevation-z5 p-0'>
+
+  <mat-card-header class="mat-card-header">
+      <mat-card-title class="p-2" *ngIf='!editMode'>ADD POST</mat-card-title>
+
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <form>
+      <mat-card-content class="p-3">
+
+      <input name="title" type='text' matInput placeholder="Post Title" required>
+
+      <ckeditor>
+          [(ngModel)]="ckeditorContent"
+      </ckeditor>
+
+
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <button mat-raised-button type="submit" class="m-2" color="#ff0000" *ngIf='!editMode'>POST</button>
+
+
+  </form>
+
+
+
+
+</mat-card>
+
+
+

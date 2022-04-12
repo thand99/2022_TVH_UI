@@ -15,26 +15,22 @@ import {MatButtonModule} from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { LayoutComponent } from './layout/layout.component';
-import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { ParticipantComponent } from './participant/participant.component';
 import { AnnoucementComponent } from './annoucement/annoucement.component';
 import { RewardComponent } from './reward/reward.component';
-
-
-
-
-
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 
 @NgModule({
@@ -49,12 +45,14 @@ import { RewardComponent } from './reward/reward.component';
     LandingPageComponent,
     UserLoginComponent,
     SignUpComponent,
-    NavbarComponent,
     LayoutComponent,
-    DashbaordComponent,
     ParticipantComponent,
     AnnoucementComponent,
+    DashboardComponent,
     RewardComponent,
+    SidebarComponent,
+
+
 
 
 
@@ -76,7 +74,9 @@ import { RewardComponent } from './reward/reward.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    CKEditorModule
 
   ],
   providers: [],

@@ -11,6 +11,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ParticipantComponent } from './participant/participant.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RewardComponent } from './reward/reward.component';
+import { AnnoucementComponent } from './annoucement/annoucement.component';
 
 
 
@@ -30,8 +33,10 @@ const routes: Routes = [
   {path: "user-login",component:UserLoginComponent},
   {path: "sign-up", component:SignUpComponent},
   {path: "layout", component:LayoutComponent},
-  {path: "participant",component:ParticipantComponent}
-
+  {path: "participant", component:ParticipantComponent},
+  {path: "dashboard", component:DashboardComponent},
+  {path: "reward", component:RewardComponent},
+  {path: "annoucement", component:AnnoucementComponent}
 
 
 ];
