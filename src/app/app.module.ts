@@ -18,6 +18,20 @@ import { TestingComponent } from './testing/testing.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { ParticipantComponent } from './participant/participant.component';
+import { LayoutComponent } from './layout/layout.component';
+import { AnnoucementComponent } from './annoucement/annoucement.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { RewardComponent } from './reward/reward.component';
+import {CKEditorModule} from 'ng2-ckeditor';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 
 
@@ -35,6 +49,11 @@ import { UserLoginComponent } from './user-login/user-login.component';
     LandingPageComponent,
     SignUpComponent,
     UserLoginComponent,
+    ParticipantComponent,
+    LayoutComponent,
+    AnnoucementComponent,
+    SidebarComponent,
+    RewardComponent,
  
     
     
@@ -47,7 +66,16 @@ import { UserLoginComponent } from './user-login/user-login.component';
     ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule,
-    FormsModule
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    FormsModule,
+    CKEditorModule,
+    
 
   ],
   providers: [ApiserviceService],

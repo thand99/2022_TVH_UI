@@ -13,6 +13,11 @@ import { AdminboardComponent } from './adminboard/adminboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ParticipantComponent } from './participant/participant.component';
+import { RewardComponent } from './reward/reward.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { AnnoucementComponent } from './annoucement/annoucement.component';
 
 
 
@@ -34,6 +39,11 @@ const routes: Routes = [
   {path:"sign-up",component:SignUpComponent},
   {path:"user-login",component:UserLoginComponent},
   {path:"",component:LandingPageComponent},
+  {path:"layout",component:LayoutComponent},
+  {path:"participant",component:ParticipantComponent},
+  {path:"reward",component:RewardComponent},
+  {path:"sidebar",component:SidebarComponent},
+  {path:"annoucement",component:AnnoucementComponent},
 
   //Testing
 
