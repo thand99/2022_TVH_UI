@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -7,19 +7,49 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./announcement.component.css']
 })
 export class AnnouncementComponent implements OnInit {
-  
-  myScriptElement!: HTMLScriptElement;
-  
-  constructor() { 
-    this.myScriptElement = document.createElement("script");
-    this.myScriptElement.src ="https://cdn.ckeditor.com/4.17.1/full-all/ckeditor.js";
-    document.body.appendChild(this.myScriptElement);
+  name = "ng2-ckeditor";
+  ckeConfig: any;
+  mycontent: string;
+  log: string = "";
+  @ViewChild("myckeditor") ckeditor: any;
+
+  constructor() {
+    this.mycontent = '';
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // https://ckeditor.com/cke4/builder
+    this.ckeConfig = {
+      extraPlugins:
+        "easyimage,dialogui,dialog,a11yhelp,about,basicstyles,bidi,blockquote,clipboard," +
+        "button,panelbutton,panel,floatpanel,colorbutton,colordialog,menu," +
+        "contextmenu,dialogadvtab,div,elementspath,enterkey,entities,popup," +
+        "filebrowser,find,fakeobjects,flash,floatingspace,listblock,richcombo," +
+        "font,format,forms,horizontalrule,htmlwriter,iframe,image,indent," +
+        "indentblock,indentlist,justify,link,list,liststyle,magicline," +
+        "maximize,newpage,pagebreak,pastefromword,pastetext,preview,print," +
+        "removeformat,resize,save,menubutton,scayt,selectall,showblocks," +
+        "showborders,smiley,sourcearea,specialchar,stylescombo,tab,table," +
+        "tabletools,templates,toolbar,undo,wsc,wysiwygarea"
+    };
+  }
+  onEditorChange(event: any) {
+    console.log(event);
   }
 
-  ckeditorContent = "";
+  onChange(event: any): void {
+    console.log(event);
+    console.log(this.mycontent);
+  }
+
+
+
+
+
+
+
+
+
 
   
 

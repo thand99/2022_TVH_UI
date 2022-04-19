@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from 'ckeditor4-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +12,8 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminboardComponent } from './adminboard/adminboard.component';
-import { ParticipantsComponent } from './participants/participants.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,14 @@ import { ParticipantsComponent } from './participants/participants.component';
     RewardsComponent,
     GalleryComponent,
     RegistrationFormComponent,
-    AdminboardComponent,
-    ParticipantsComponent
+    AdminboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    CKEditorModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

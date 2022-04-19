@@ -6,7 +6,6 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminboardComponent } from './adminboard/adminboard.component';
-import { LoginComponent } from './login/login.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
 
 const routes: Routes = [
@@ -16,7 +15,6 @@ const routes: Routes = [
   {path: "gallery", component:GalleryComponent},
   {path: "registration-form", component:RegistrationFormComponent},
   {path: "adminboard", component:AdminboardComponent},
-  {path: "login" , component:LoginComponent },
   {path: "announcement", component:AnnouncementComponent}
 ];
 
