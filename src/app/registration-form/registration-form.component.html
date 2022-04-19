@@ -9,63 +9,180 @@
 <body>
     <div class="container">
         <div class="reg-form">
-            <form action="">
+            <form  #regForm="ngForm" [formGroup]="registerForm"  (ngSubmit)="clickhandle() " >
+                
+
+                
                 <div class="pic-logo">
                     <img src="../assets/tut-logo.png">
                 </div>
                 <div class="heading">
                     <h1>TVH Registration Form</h1>
                 </div>
-                <p>First And Last Name</p>
-                <input type="text" class="name" placeholder="Enter your full names" required>
+
+
+                <p>Student Number</p>
+                <input type="text" formControlName="studentNumber"  class="stud" placeholder="Enter your full names" required [(ngModel)]="student" id="stud" name="studentNumber" namesControl="ngModel">
+                
+          <!---error message-->
+          <div *ngIf=" studentNumbers.invalid && (studentNumbers.touched || studentNumbers.dirty)"   >
+            <span class="alert" *ngIf="submitted && studentNumbers.errors?.required">*Student number is required</span>
+            <span class="alert" *ngIf="studentNumbers.errors?.pattern">*Enter only numbers</span>
+
+         </div>
+
+                <p>Full Names</p>
+                <input type="text" formControlName="names"  class="name" placeholder="Enter your full names" required [(ngModel)]="names" id="names" name="name" namesControl="ngModel">
+                
+          <!---error message-->
+          <div *ngIf=" namess.invalid && (namess.touched || namess.dirty)"   >
+            <span class="alert" *ngIf="submitted && namess.errors?.required">*Full names are required</span>
+            <span class="alert" *ngIf="namess.errors?.pattern">*Enter only characters</span>
+
+         </div>
+
+                <p>Surname</p>
+                <input type="text" formControlName="surname" class="name" placeholder="Enter your surname" required [(ngModel)]="surname" id="surname" name="surname" namesControl="ngModel">
                 <div class="gen-date">
+
+          <!---error message-->
+          <div *ngIf=" submitted && surnames.invalid && (surnames.touched || surnames.dirty)" >
+            <span class="alert" *ngIf="surnames.errors?.required">*Surname is required</span>
+            <span class="alert" *ngIf="surnames.errors?.pattern">*Enter only characters</span>
+
+         </div>
+
                     <p>Gender</p>
                     <br>
-                    <select class="the-gender">
-                        <option value="choose">Choose Option</option>
-                        <option value="male">Male</option>
-                        <option value="male">Female</option>
+                    <select class="the-gender" formControlName="genders" name="genders" required  [(ngModel)]="gender" id="gender">
+                      
+                        <option disabled value="choose">Choose Option</option>
+                        <option *ngFor="let genderss of genders" [value]="genderss.value">
+                            {{genderss.viewValue}}</option>
                     </select>
-                    <p>Date Of Birth</p>
-                    <input type="date" class="date" placeholder="Enter your date of birth" required>
-                </div>
-                <p>Student Mail</p>
-                <input type="text" class="email" placeholder="Enter your student email" required>
-                <p>Password</p>
-                <input type="text" class="email" placeholder="Enter your password" required>
-                <p>Institution</p>
-                <br>
-                <select class="your-insti">
-                    <option value="choose">Choose Option</option>
-                    <option value="tut">Tshwane University Of Technology</option>
-                    <option value="up">University Pretoria</option>
-                    <option value="smu">Sefako Makgatho University</option>
-                    <option value="unisa">Unisa</option>
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && genderss.invalid && (genderss.touched || genderss.dirty)" >
+                                                <span class="alert" *ngIf="genderss.errors?.required">*gender is required</span>
+                                           </div>
 
-                </select>
-                <p>Recent Proof Of Registration</p>
-                <input type="file" class="browser" >
+
+                    <p>Date Of Birth</p>
+                    <input  type="date" class="date" formControlName="dates" placeholder="Enter your date of birth" required [(ngModel)]="dateBirth" id="dates" name="dates">
+                </div>
+
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && datess.invalid && (datess.touched || datess.dirty)" >
+                                                <span class="alert" *ngIf="datess.errors?.required">*Date is required</span>
+                                           </div>
+
+
+                <p>Email Address</p>
+                <input type="text"  formControlName="email" class="email" placeholder="Enter your email" required [(ngModel)]="stud_email" id="email" name="email" email="true">
+                
+                
+                <!---error message-->
+                <div *ngIf=" submitted && emails.invalid && (emails.touched || emails.dirty)" >
+                    <span class="alert" *ngIf="emails.errors?.required">*emails is required</span>
+                    <span class="alert" *ngIf="emails.errors?.email">*Enter valid email address</span>
+
+                 </div>
+
+                 <p>Campus</p>
+                 <br>
+                 <select class="your-insti" formControlName="campuses" name="institutes" required [(ngModel)]="campus"  id="institutes">
+                     <option disabled value="choose">Choose Option</option>
+                     <option  *ngFor="let camp of camps" [value]="camp.value">
+                        {{camp.viewValue}}</option>
+                 </select>
+
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && campusess.invalid && (campusess.touched || campusess.dirty)" >
+                                                <span class="alert" *ngIf="campusess.errors?.required">*Campus is required</span>
+                                           </div>
+                
+                <p>Faculty</p>
+                <br>
+                <select  class="your-insti" formControlName="institutes" name="institutes" required  [(ngModel)]="facult" id="institutes">
+                  
+                    <option disabled value="choose">Choose Option</option>
+                    <option  *ngFor="let institutess of institutes" [value]="institutess.value">
+                        {{institutess.viewValue}}</option>
+                 </select>    
+                                            <!---error message-->
+                                            <div *ngIf=" submitted && institutess.invalid && (institutess.touched || institutess.dirty)" >
+                                                <span class="alert" *ngIf="institutess.errors?.required">*Faculty is required</span>
+                                           </div>
+
+                <p>Specialization</p>
+                <input type="text" formControlName="special" class="name" placeholder="Enter your specialization" required [(ngModel)]="spec">
+                   
+          <!---error message-->
+          <div *ngIf=" specs.invalid && (specs.touched || specs.dirty)"   >
+            <span class="alert" *ngIf="submitted && specs.errors?.required">*Specialixation is required</span>
+            <span class="alert" *ngIf="specs.errors?.pattern">*Enter only characters</span>
+
+         </div>
+                                
                 <p>Mobile Number</p>
-                <input type="text" class="number" placeholder="Enter your cellphone number" required>
+                <input type="text" formControlName="mobileNumber" class="mobileNumber" placeholder="Enter your cellphone number" required [(ngModel)]="mNumber" id="mobileNumber" name="mobileNumber">
+                
+                <!---error message-->
+                <div *ngIf="mobilenumber.invalid && (mobilenumber.touched || mobilenumber.dirty)" >
+                    <span class="alert" *ngIf=" submitted && mobilenumber.errors?.required">*cellphone number is required</span>
+                    <span class="alert" *ngIf="mobilenumber.errors?.pattern">*Enter only numbers</span>
+
+                 </div>
+                
                 <p>Participant Skills</p>
                 <br>
-                <select class="your-insti">
-                    <option value="choose">Choose Option</option>
-                    <option >Analyst</option>
-                    <option >Programmer</option>
-                    <option >Graphic designer</option>
-                    <option >Marketer</option>
-                </select>
-                <p>Status</p>
+                <select class="your-insti" formControlName="skill" name="skill" [(ngModel)]="skills" id="skill">
+                    <option  disabled value="choose">Choose Option</option>
+                    <option *ngFor="let skillss of skill" [value]="skillss.value">
+                        {{skillss.viewValue}}</option>
+                    </select>
+                        <div *ngIf=" submitted && skil.invalid && (skil.touched || skil.dirty)" >
+                            <span class="alert" *ngIf="skil.errors?.required">*Skills is required</span>
+                            
+        
+                    </div>
+                
+                <p>Level</p>
                 <br>
-                <select class="status">
-                    <option value="choose">Choose Option</option>
-                    <option value="team">Team</option>
-                    <option value="male">Individual</option>
-                </select>
-               
-                <input type="submit" value="Submit">
+                <select class="your-insti" formControlName="level"  [(ngModel)]="leve">
+                        <option disabled value="choose">Choose Option</option>
+                        <option *ngFor="let levels of level" [value]="levels.value">
+                            {{levels.viewValue}}</option>
 
+
+                </select>
+
+                <div *ngIf=" submitted && lev.invalid && (lev.touched || lev.dirty)" >
+                    <span class="alert" *ngIf="lev.errors?.required">*Level is required</span>
+                    
+
+             </div>
+            
+             
+             <p>Hobby</p>
+             <input type="text" formControlName="hobby"  class="email" placeholder="State your hobby" required [(ngModel)]="hob">
+
+       <!---error message-->
+       <div *ngIf=" submitted && hobs.invalid && (hobs.touched || hobs.dirty)" >
+         <span class="alert" *ngIf="hobs.errors?.required">*Hobby is required</span>
+         <span class="alert" *ngIf="hobs.errors?.pattern">*Enter only characters</span>
+
+      </div>
+
+
+
+                
+
+
+                <button  type="submit"   class="submit-btn"  value="Submit">Submit</button>
+                <br>
+                <br>
+                <!--<button mat-raised-button>Testing</button>-->
+                
             </form>
         </div>
 

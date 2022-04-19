@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiserviceService} from '../apiservice.service';
+import { Router } from '@angular/router';
 import * as XLSX from 'xlsx';
+
 
 @Component({
   selector: 'app-adminboard',
@@ -10,8 +13,7 @@ export class AdminboardComponent implements OnInit {
 
   title ='Admin';
   fileName = 'applicants.xlsx';
-  status = 'Pending...';
-
+  status = 'Pending..';
 
   exportTableToExcel(): void {
     const element = document.getElementById('app-table');
@@ -23,19 +25,34 @@ export class AdminboardComponent implements OnInit {
     XLSX.writeFile(wb, this.fileName)
 
   }
-  getStatusAccepted(){
+
+
+  getStatusAccepted(us: any){
     console.log("Accepted");
-    this.status ="Accepted"
+    us.status ="Accepted"
   }
-  getStatusRejected(){
+  getStatusRejected(us: any){
     console.log("Rejected");
-    this.status ="Rejected"
+    us.status ="Rejected"
   }
 
+  constructor(private service:ApiserviceService, private route:Router) { }
 
-  constructor() { }
 
+  readData:any;
   ngOnInit(): void {
+
+    this.service.getadminLoadFile().subscribe((res) =>{
+      console.log(res, "res==>");
+
+      this.readData = res.data;
+  })
+
+    
   }
+
+ 
+    
+
 
 }

@@ -1,0 +1,120 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.participants{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.table thead tr th{
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+.table tbody tr td{
+    font-size: 20px;
+}
+
+.table th,
+.table td{
+    padding: 12px 15px;
+    
+}
+.table tbody tr td{
+    border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+    background: lightgray;
+}
+.table tbody tr:last-of-type{
+    border-bottom: 2px solid #ddd;
+}
+.table tbody tr td .view {
+    background-color: rgb(170, 170, 5);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 6px 20px;
+}
+.table tbody tr td .accept {
+    background-color: rgb(24, 24, 197);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 6px 20px;
+    position: absolute;
+    left: 90%;
+    margin-top: -30px;
+}
+.table tbody tr td .reject {
+    background-color: rgba(228, 21, 21, 0.925);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 6px 20px;
+    position: absolute;
+    right: 2%;
+    margin-top: -30px;
+}
+.participants-list h1{
+    font-size: 25px;
+}
+.left{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+}
+.left .breadcrumb{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    font-size: 20px;
+}
+.left .breadcrumb li a{
+    color: darkgray;
+   
+}
+.left .breadcrumb li a.active{
+    color: blue;
+}
+.detail-header{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.detail-header h4{
+    font-size: 32px;
+}
+.detail-header button {
+    height: 40px;
+    width: 120px;
+    border: 1px solid rgb(98, 98, 250);
+    background-color: rgb(98, 98, 250);
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}

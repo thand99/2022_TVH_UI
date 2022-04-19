@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+</head>
+
+<body>
+    <input type="checkbox" name="" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-main">
+            
+            <div class="sidebar-user">
+                 <img src="../assets/profile.jpg" width="60px" alt="">
+                    <div>
+                         <h3>Admin Dashboard</h3>
+                        
+                    </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="adminboard">
+                            <span class="icon"></span>
+                            <i class="las la-home"></i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="participants">
+                            <span class="icon"></span>
+                            <i class="las la-user-friends"></i>
+                            <span class="title">Participants</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"></span>
+                            <i class="las la-bullhorn"></i>
+                            <span class="title">Announcements</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"></span>
+                            <i class="las la-image"></i>
+                            <span class="title">Gallery</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"></span>
+                            <i class="las la-gift"></i>
+                            <span class="title">Rewards</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="menu-toggle"> 
+                    <label for="sidebar-toggle">
+                        <i class="las la-bars"></i>
+                        <span class="dashboard">Dashboard</span>
+                    </label>
+            </div>
+
+            <div class="header-icons">
+                <i class="las la-search"></i>
+                <input type="search" placeholder="Search here"/>
+            </div>
+
+            <div class="content-area">
+                <div class="notification">
+                  
+                </div>
+            </div>
+
+            
+             <div class="but-log">
+                <i class="las la-sign-out-alt"></i>
+                <button class="log-icon" href="home"> Logout</button>
+            </div>
+        
+
+        </header>
+        <main>
+            <br>
+            <div class="left" >
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li><i class="las la-chevron-right"></i></li>
+                    <li>
+                        <a class="active" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>5</h1>
+                        <span>Tasks</span>
+                    </div>
+                    <div class="las-icon">
+                        <i class="las la-clipboard-list"></i>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>3</h1>
+                        <span>Events</span>
+                    </div>
+                    <div class="las-icon">
+                        <i class="las la-newspaper"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="card-detail">
+                <div class="detail-header">
+                    <h4>Applicants List</h4>
+                    <button (click)="exportTableToExcel()" ><i class="las la-share-square"></i>Excel</button>   
+                </div>   
+                    <table id="app-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Gender</th>
+                                <th>Date Of Birth</th>
+                                <th>Email</th>
+                                <th>Institution</th>
+                                <th>Skills</th>
+                                <th>Academic Record</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let us of readData">
+                                <th>{{us.id}}</th>
+                                <td>{{us.fullName}}</td>
+                                <td>{{us.surname}}</td>
+                                <td>{{us.gender}}</td>
+                                <td>{{us.dateOfBirth}}</td>
+                                <td>{{us.emailAddress}}</td>
+                                <td>{{us.institution}}</td>
+                                <td>{{us.skills}}</td>
+                                <td>{{us.academicRecord}}</td>
+                                <td>{{us.status}}</td>
+                                <td>
+
+                                   <diV>
+                                       <button (click)="getStatusAccepted(us)" class="accept">Accept</button>
+                                    </diV>
+                                   <diV>
+                                       <button (click)="getStatusRejected(us)" class="reject">Reject</button>
+                                    </diV>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+
+<app-sidebar></app-sidebar>
+
