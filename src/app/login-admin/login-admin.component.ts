@@ -55,7 +55,7 @@ export class LoginAdminComponent implements OnInit {
       if(res.message =="login Successful")
       {
         //alert("You are successful loged in")
-          this.route.navigate(["adminboard"])
+          this.route.navigate(["layout"])
           
       }
       else{

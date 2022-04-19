@@ -134,7 +134,7 @@ export class SignUpComponent implements OnInit {
        {
           alert("Your signup is successfull, NB: PLEASE CHECK YOUR EMAIL TO CONFIRM YOUR EMAIL");
           this.signupForm.reset();
-          this.route.navigate(["user-login"])
+          this.route.navigate(["landing-page"]);
        }
        else if(res.message == "Email already signed up!!!")
        {

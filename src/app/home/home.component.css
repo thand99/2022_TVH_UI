@@ -156,14 +156,15 @@ nav img{
   font-family: 'Times New Roman';
   position: absolute;
   /*text-align: center;*/
-  padding-top: 400px;
-  margin-left: 950px;
+  padding-top: 500px;
+  margin-left: 420px;
+  margin-top: 140px;
 }
 .thebutton{
     left: 50%;
     transform: translate(-50%,-50%);
     position: absolute;
-    margin-top: -200px;
+    margin-top: -300px;
 
 }
 .btn{
@@ -281,12 +282,12 @@ nav img{
   .heading {
     color:white;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 70px;
     font-family: 'Times New Roman';
     position: absolute;
     text-align: center;
     padding-top: 180px;
-    margin-left: 395px;
+    margin-left: 650px;
   }
   .nav-bars ul li a{
     text-decoration: none;
