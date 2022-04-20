@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
 
-@media (min-width:1281px){
+@media (max-width:1400px){
   *{
     margin: 0;
     padding: 0;
@@ -40,8 +40,9 @@ h1{
   }
 .heading p{
   text-align: center;
-  font-size: 22px;
-  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(0, 1, 85);
   margin-top: 350px;
 }
 .row{
@@ -60,10 +61,13 @@ h1{
 .box:hover{
   transform:scale(1.1);
 }
+span{
+  font-style: italic;
+}
 .box img{
-    width: 250px;
+    width: 180px;
     height: 80px;
-    margin: 10px;
+    margin: 15px;
 }
 .box img:hover{
   transform:scale(1.1);

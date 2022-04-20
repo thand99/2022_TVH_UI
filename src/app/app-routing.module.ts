@@ -14,6 +14,8 @@ import { ParticipantComponent } from './participant/participant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RewardComponent } from './reward/reward.component';
 import { AnnoucementComponent } from './annoucement/annoucement.component';
+import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
+
 
 
 
@@ -36,7 +38,8 @@ const routes: Routes = [
   {path: "participant", component:ParticipantComponent},
   {path: "dashboard", component:DashboardComponent},
   {path: "reward", component:RewardComponent},
-  {path: "annoucement", component:AnnoucementComponent}
+  {path: "annoucement", component:AnnoucementComponent},
+  {path: "public-annoucement", component:PublicAnnoucementComponent}
 
 
 ];
