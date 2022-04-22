@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
 *{
   margin: 0;
   padding: 0;
@@ -150,14 +151,14 @@ nav img{
 
 }
 .heading {
-  color: white;
+  color:white;
   font-weight: bold;
   font-size: 60px;
   font-family: 'Times New Roman';
   position: absolute;
-  /*text-align: center;*/
+  text-align: center;
   padding-top: 400px;
-  margin-left: 950px;
+  margin-left: 850px;
 }
 .thebutton{
     left: 50%;
@@ -177,6 +178,7 @@ nav img{
     font-weight: bold;
     font-size: 25px;
     cursor: pointer;
+
 }
 .btn:hover{
   box-shadow: 0 0 10px #000;
@@ -221,7 +223,7 @@ nav img{
   color: #fff;
   text-align: center;
   margin-top: 1px;
-  font-size: medium;
+  font-size: 14px;
 
 }
 @media (min-width:1281px){
@@ -255,6 +257,8 @@ nav img{
     margin-bottom: -14x;
     color: rgb(38, 61, 190);
     font-weight: bold;
+    left: 20%;
+    position: relative;
 
   }
   .launch-time div{
@@ -262,6 +266,7 @@ nav img{
     padding:10px;
     color: rgb(38, 61, 190);
     font-size: 15px;
+
   }
   .btn{
     background: #ff0000;
@@ -275,8 +280,6 @@ nav img{
     font-size: 23px;
     margin-top: 200px;
     cursor: pointer;
-
-
   }
   .heading {
     color:white;
@@ -305,6 +308,132 @@ nav img{
     margin-top: 1px;
     font-size: 15px;
 
+  }
+}
+nav .las{
+  display: none;
+}
+
+
+
+@media (max-width:497px){
+  .slider figure img{
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 75px;
+
+  }
+
+  .heading {
+    color:white;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Times New Roman';
+    text-align: center;
+    padding-top: 200px;
+    margin-left: 55px;
+  }
+
+  .btn{
+    background: #ff0000;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 140px;
+    height: 35px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 220px;
+    cursor: pointer;
+  }
+  .year h2{
+    margin-top: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(38, 61, 190);
+    font-weight: bold;
+    text-align: center;
+
+  }
+  .launch-time div p{
+    font-size: 20px;
+    margin-top: 7px;
+    margin-bottom: -14x;
+    color: rgb(38, 61, 190);
+    font-weight: bold;
+    left: 50%;
+    position: relative;
+
+  }
+  .launch-time div{
+    flex-basis: 180px;
+    padding:10px;
+    color: rgb(38, 61, 190);
+    font-size: 17px;
+  }
+  .words h1{
+
+    font-size: 22px;
+    margin-top: 120px;
+    font-weight: bolder;
+    color: rgb(38, 61, 190);
+    text-align: center;
+  }
+  nav img{
+  width: 60px;
+  margin-left:-10px;
+  filter: brightness(110%);
+  position: absolute;
+  margin-top: 50px;
+}
+
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links{
+
+
+  }
+  nav .las{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    left: 75%;
+    position: relative;
+  }
+  .nav-links ul{
+    padding: 10px;
+
+  }
+  .nav-links ul li a{
+     color: #fff;
+     font-size: 13px;
+  }
+  .nav-bars ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    transition: .6s ease-in-out;
+
+  }
+  #nav-toggle:checked + .nav-links{
+    width: 100px;
+  }
+  .footer{
+    background: rgb(0, 14, 95);
+    height: 158px;
   }
 }
 
