@@ -12,7 +12,6 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginFormComponent } from './login-form/login-form.component';
 import {MatButtonModule} from '@angular/material/button';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -43,7 +42,6 @@ import { PublicAnnoucementComponent } from './public-annoucement/public-annoucem
     GalleryComponent,
     RegistrationFormComponent,
     LoginFormComponent,
-    LandingPageComponent,
     UserLoginComponent,
     SignUpComponent,
     LayoutComponent,

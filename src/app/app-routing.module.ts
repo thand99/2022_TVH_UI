@@ -6,7 +6,6 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -25,8 +24,8 @@ import { PublicAnnoucementComponent } from './public-annoucement/public-annoucem
 
 
 const routes: Routes = [
-  {path: "",component:LandingPageComponent},
-  {path: "home",component:HomeComponent},
+
+  {path: "",component:HomeComponent},
   {path: "about", component:AboutComponent},
   {path: "rewards", component:RewardsComponent},
   {path: "gallery", component:GalleryComponent},
