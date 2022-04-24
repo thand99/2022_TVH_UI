@@ -11,27 +11,34 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginFormComponent } from './login-form/login-form.component';
-import {MatButtonModule} from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { LayoutComponent } from './layout/layout.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
 import { ParticipantComponent } from './participant/participant.component';
 import { AnnoucementComponent } from './annoucement/annoucement.component';
 import { RewardComponent } from './reward/reward.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { FormsModule } from '@angular/forms';
-import { CKEditorModule } from 'ng2-ckeditor';
 import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
+import { LayoutComponent } from './layout/layout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCommonModule } from '@angular/material/core';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+import { AngularFileUploaderModule } from "angular-file-uploader";
+import { CKEditorModule } from 'ng2-ckeditor';
+
 
 
 @NgModule({
@@ -54,22 +61,18 @@ import { PublicAnnoucementComponent } from './public-annoucement/public-annoucem
     SidebarComponent,
     PublicAnnoucementComponent,
 
-
-
-
-
-
-
-
-
   ],
   imports: [
     BrowserModule,
+    AngularFileUploaderModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    MatCommonModule,
     MatButtonModule,
     LayoutModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
@@ -77,11 +80,16 @@ import { PublicAnnoucementComponent } from './public-annoucement/public-annoucem
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatChipsModule,
     CKEditorModule
 
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
