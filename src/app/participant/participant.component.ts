@@ -1,31 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-participant',
   templateUrl: './participant.component.html',
   styleUrls: ['./participant.component.css']
 })
-export class ParticipantComponent implements OnInit {
-  
-  afuConfig = {
-    uploadAPI: {
-      url:"https://example-file-upload-api"
-    }
-  };
+export class ParticipantComponent {
 
+  selectedFile!: File;
 
-
-
-
-
-  constructor() { }
-
-  
-
+  constructor(private http: HttpClient) {}
  
-  ngOnInit(): void {
+  onFileSelected(event: any) {
+    this.selectedFile = <File>event.target.files[0];
   }
+
+  onUpload() {
+    const fd = new FormData();
+    fd.append('image', this.selectedFile, this.selectedFile.name);
+  }
+
+
+
 
   
 

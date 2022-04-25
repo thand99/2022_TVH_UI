@@ -24,7 +24,7 @@
             <mat-option value="one">Lead Organizing Team</mat-option>
             <mat-option value="two">Industry Volunteers</mat-option>
             <mat-option value="two">Organizing Team</mat-option>
-            </mat-select>
+            </mat-select>        
         </mat-form-field>
 
         <mat-form-field class="form-field" appearance="fill">
@@ -32,14 +32,11 @@
             <textarea class="description" matInput></textarea>
         </mat-form-field>
 
-        <angular-file-uploader
-            [config]="afuConfig">
-        </angular-file-uploader>
-
-        <div class="upload">
-            <button type="button" class="submit">Submit</button>
+        <div class="file">
+            <h2>File Upload</h2>
+            <input class="in-file" type="file" (change)="onFileSelected($event)"> 
+            <button mat-raised-button class="btn-upload" type="button" (click)="onUpload()">Upload</button>  
         </div>
-
     </form>
 
 </mat-card>
