@@ -49,4 +49,24 @@ textarea .description
     border: 2px solid gray ;
 
 }
- 
+.file {
+    display: grid;
+    justify-content: space-between;
+}
+.file h2 {
+    font-size: 23px;
+    font-weight: bold;
+}
+.file input {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+.form-content {
+    position: absolute;
+    width: 100%;
+}
+table {
+    width: 100%;
+}

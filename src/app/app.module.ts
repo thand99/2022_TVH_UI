@@ -37,6 +37,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
 import { AngularFileUploaderModule } from "angular-file-uploader";
 import { CKEditorModule } from 'ng2-ckeditor';
 
@@ -83,6 +84,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
     MatCardModule,
     MatMenuModule,
     MatInputModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     MatChipsModule,
