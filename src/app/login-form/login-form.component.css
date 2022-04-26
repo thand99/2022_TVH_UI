@@ -1,6 +1,4 @@
 @media (max-width:1400px){
-
-
 *{
   margin: 0;
   padding: 0;
@@ -23,9 +21,7 @@ body{
   padding: 50px 0;
   color: #fff;
 }
-.input-box:hover{
-  border: 2px solid #0059ff;
-}
+
 .login-word{
   height: 50px;
   background: #0059ff;
@@ -41,8 +37,8 @@ body{
 .input-box{
   margin: 31px auto;
   width: 80%;
-  border: 1px solid #c2c2c2;
-  border-radius: 20px;
+  border: 1px solid #0059ff;
+  outline: none;
   padding-top: 10px;
   padding-bottom: 5px;
 }
@@ -54,7 +50,6 @@ body{
   color: #000;
   font-size: 16px;
   margin-left: 6px;
-
 }
 ::placeholder{
   color:#000;
@@ -118,14 +113,11 @@ body{
 .input-box{
   margin: 31px auto;
   width: 80%;
-  border: 1px solid #c2c2c2;
-  border-radius: 20px;
+  border: 1px solid #0059ff;
   padding-top: 10px;
   padding-bottom: 5px;
 }
-.input-box:hover{
-  border: 2px solid #0059ff;
-}
+
 .input-box input{
   width: 90%;
   border: none;
