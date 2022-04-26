@@ -19,15 +19,21 @@
 
       <mat-divider></mat-divider>
 
-      <form>
+      <form #postForm="ngForm" (ngSubmit)="clickhandle() "  >
           <mat-card-content class="p-3">
 
-          <input name="title" type='text' matInput placeholder="Post Title" required>
+            <p>Title</p>
+          <input name="title" type='text' matInput placeholder="Post Title" required [(ngModel)]="title" >
 
-          <ckeditor>
-              [(ngModel)]="ckeditorContent"
+          <p>Date</p>
+          <input  type="date" class="date" placeholder="Enter date" required   [(ngModel)]="date" id="dates" name="dates">
+
+          <ckeditor [(ngModel)]="post.body"       
+          id="body"
+          name="body"
+          type="divarea" >
+            
           </ckeditor>
-
 
           </mat-card-content>
 

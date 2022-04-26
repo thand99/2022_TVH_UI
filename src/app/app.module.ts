@@ -31,6 +31,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -54,6 +56,8 @@ import { MatMenuModule } from '@angular/material/menu';
     AnnoucementComponent,
     SidebarComponent,
     RewardComponent,
+    PublicAnnoucementComponent,
+    TestComponent,
  
     
     
@@ -74,7 +78,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatCardModule,
     MatMenuModule,
     FormsModule,
-    CKEditorModule,
+    CKEditorModule
     
 
   ],

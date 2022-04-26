@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .col-1 {
+    width: calc((50% -2 * 1rem) / 2);
+    background-color: white;
+  }
+  .col-2 {
+    width: calc((148% -2 * 1rem) / 2);
+    background-color: white;
+  }
+  .row {
+    width: 100%;
+    /* margin-bottom: 4rem; */
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    /* height: 80%; */
+    width: 5%;
+    padding-left: 10px 20px;
+    margin-left: 40rem;
+  }
+  h3 {
+    font-weight: lighter;
+  }
+  h4 {
+    background-color: rgb(216, 215, 215);
+    color: blue;
+    width: 50%;
+    border-radius: 5rem;
+    padding: 0.5%;
+  }
+  .container {
+    width: 100%;
+    /* margin: 0 auto; */
+    padding-top: 0em;
+    color: #333;
+  }
+  .thenav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 8%;
+    align-items: center;
+    background: rgb(28, 13, 160);
+    height: 20px;
+  }
+  .nav-links {
+    flex: auto;
+    text-align: center;
+  }
+  .nav-links ul li {
+    display: inline-block;
+    padding: 10px 19px;
+    position: relative;
+  }
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+  }
+  .vertical {
+    border-left: 2px solid;
+    height: 50rem;
+    /* position: absolute; */
+    /* left: 50%; */
+  }
+  hr {
+    height: 2px;
+    background-color: #333;
+    padding-left: 60rem;
+    /* width: 100%; */
+  }
+  
+  .btn {
+    background-color: #f1f1f1;
+    border: none;
+    color: black;
+    padding: 8px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 0%;
+  }
+  
+  .btn:hover {
+    background-color: #cccccc;
+  }
+  
+  form.search input[type="text"] {
+      width: 20%;
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid black;
+      border-right: none;
+      float: left;
+      background: white;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+  
+    form.search button {
+      float: left;
+      width: 10%;
+      padding: 10px;
+      background: white;
+      color: black;
+      font-size: 17px;
+      border: 1px solid black;
+      border-left: none;
+      cursor: pointer;
+    }
+  
+  
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: dodgerblue;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .dropdown-btn:hover {
+    color: grey;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  
+  .fa-angle-down {
+    color: gray;
+    padding-right: 8px;
+    font-size: 20px;
+  }
+  .help-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: dodgerblue;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .fa-question-circle {
+    color: black;
+  }
+  
+  select.inputstyle {
+    width: 178px;
+    height: 27px;
+    margin-top: 6px;
+    direction: rtl;
+    margin-left: 0%;
+  }

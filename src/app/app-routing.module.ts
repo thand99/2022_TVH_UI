@@ -18,6 +18,10 @@ import { ParticipantComponent } from './participant/participant.component';
 import { RewardComponent } from './reward/reward.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AnnoucementComponent } from './annoucement/annoucement.component';
+import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
+////testing.....
+
+import { TestComponent } from './test/test.component';
 
 
 
@@ -44,8 +48,10 @@ const routes: Routes = [
   {path:"reward",component:RewardComponent},
   {path:"sidebar",component:SidebarComponent},
   {path:"annoucement",component:AnnoucementComponent},
+  {path:"public-annoucement",component:PublicAnnoucementComponent},
 
   //Testing
+  {path:"test",component:TestComponent},
 
 
 

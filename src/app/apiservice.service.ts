@@ -22,9 +22,13 @@ export class ApiserviceService {
 
     apqUrl = 'http://localhost:9002/adminLoadFile'; //admin View Data From Database
 
+    apwUrl = 'http://localhost:9002/noticeLoadFile'; //Notice display Data From Database
+
     apaUrl = 'http://localhost:9002/signUp'; /// Signup for users
 
     apkUrl = 'http://localhost:9002/userLogin'; /// Users login
+
+    apmUrl = 'http://localhost:9002/notice'; /// announcement
 
 
 
@@ -38,7 +42,7 @@ export class ApiserviceService {
       
     }
 
-    //get data from form store it to the database
+    //get data from frontend store it to the database
 
     getRegistration(credintials:any)
     {
@@ -49,6 +53,12 @@ export class ApiserviceService {
     getadminLoadFile():Observable<any>
     {
       return this._http.get(`${this.apqUrl}`);
+    }
+
+        ///retrieve data from database to admin dashboard
+    getnoticeLoadFile():Observable<any>
+    {
+          return this._http.get(`${this.apwUrl}`);
     }
 
      //post using signup
@@ -64,5 +74,12 @@ export class ApiserviceService {
       return this._http.post<any>(this.apkUrl, credintials);
 
       
+    }
+
+    //Get announcement data from admin store it to the database
+
+    getAnnouncement(credintials:any)
+    {
+        return this._http.post<any>(this.apmUrl, credintials );
     }
 }
