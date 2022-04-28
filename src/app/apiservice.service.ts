@@ -1,6 +1,6 @@
-/*import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 
 
 
@@ -9,11 +9,38 @@ import { Observable } from 'rxjs';
 })
 export class ApiserviceService {
 
-  constructor(private _http:HttpClient) { }
+  constructor(private http:HttpClient) { }
+
+    postLeader(data:any){
+      return this.http.post<any>('http://localhost:3000/posts', data).pipe(map((res:any)=> {
+        return res;
+      }))
+    }
+
+    getLeader(){
+      return this.http.get<any>('http://localhost:3000/posts').pipe(map((res:any)=> {
+        return res;
+      }))
+    }
+
+    updateLeader(data:any, id:number){
+      return this.http.put<any>('http://localhost:3000/posts' +id, data).pipe(map((res:any)=> {
+        return res;
+      }))
+    }
+
+    deleteLeader(id:number){
+      return this.http.delete<any>('http://localhost:3000/posts' +id).pipe(map((res:any)=> {
+        return res;
+      }))
+    }
 
 
 
 
+
+
+/*
   ////connection for frontend and backend
 
     apiUrl = 'http://localhost:9002/login'; //Adminlogin
@@ -65,4 +92,5 @@ export class ApiserviceService {
 
       
     }
-}*/
+    */
+}

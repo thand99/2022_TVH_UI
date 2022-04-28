@@ -33,7 +33,7 @@ textarea .description
 }
 .card{
     position: relative;
-    left: 10%;
+    left: 8%;
     width: 100%;
     height: 650px;
 }
@@ -58,15 +58,28 @@ textarea .description
     font-weight: bold;
 }
 .file input {
-    font-size: 20px;
     width: 100%;
     height: 100%;
-
 }
 .form-content {
     position: absolute;
     width: 100%;
 }
 table {
-    width: 100%;
+   width: 70%;
+   position: relative;
+   left: 20%;
+   margin-top: 100px;
+}
+.demo-button-container {
+    position: absolute;
+    padding-top: 50px;
+    left: 30%;
+}
+.mat-card-title{
+    color:blue;
+    position: absolute;
+    left:21%;
+    padding-top: 60px;
+    font-size: 20px;
 }

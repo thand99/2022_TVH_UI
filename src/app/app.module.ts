@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+
+
+import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RewardsComponent } from './rewards/rewards.component';
@@ -22,11 +23,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
 import { LayoutComponent } from './layout/layout.component';
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
-import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -40,12 +43,16 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { AngularFileUploaderModule } from "angular-file-uploader";
 import { CKEditorModule } from 'ng2-ckeditor';
+import { A11yModule } from '@angular/cdk/a11y';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DialogComponent,
     AboutComponent,
     HomeComponent,
     RewardsComponent,
@@ -61,7 +68,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
     DashboardComponent,
     RewardComponent,
     SidebarComponent,
-    PublicAnnoucementComponent,
+    PublicAnnoucementComponent
 
   ],
   imports: [
@@ -88,11 +95,13 @@ import { CKEditorModule } from 'ng2-ckeditor';
     FormsModule,
     ReactiveFormsModule,
     MatChipsModule,
-    CKEditorModule
+    CKEditorModule,
+    A11yModule,
+    MatDialogModule
 
   ],
   providers: [
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+
   ],
   bootstrap: [AppComponent]
 })
