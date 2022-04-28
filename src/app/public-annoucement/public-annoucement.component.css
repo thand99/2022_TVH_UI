@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
 @media (max-width:1400px){
   *{
     margin: 0;
@@ -5,7 +6,198 @@
     box-sizing: border-box;
     font-family: Arial;
   }
-  .main{
-    background-color: #000;
-  }
+  .nav-links{
+    display: flex;
+    justify-content:center ;
+    align-items: right;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+    position: sticky;
+    top: 0;
+
 }
+nav img{
+  width: 70px;
+  margin-left: -50px;
+  margin-top: 5px;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.nav-links ul li{
+    font-family: Arial;
+    font-size: 18px;
+    position: relative;
+    right: -28%;
+
+}
+.nav-links h1{
+  color: #100550;
+  margin-top: 15px;
+  position: relative;
+  left: 2%;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: #100550;
+    padding: 8px 12px;
+    transition: all .5s ease;
+}
+.nav-links ul li a:hover{
+    background-color: #100550;
+    border-radius: 3px;
+    color: #fff;
+
+}
+.the-admin{
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 35px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #100550;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-left: 250px;
+}
+.the-admin:hover{
+  background-color: #1b00b4;
+  cursor: pointer;
+}
+  .main{
+    width: 100%;
+    height: 45vh;
+    background-image:linear-gradient(to right,rgba(0, 0, 255, 0.637) 0%,rgba(255, 0, 0, 0.637) 100%),url(annouce-pic.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+.ann-heading{
+  font-size: 75px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  top: 25%;
+  margin-left: 20px;
+}
+.updates{
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+  position: relative;
+  top: 30%;
+  margin-left: 20px;
+}
+.lastest-ann{
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.download-btn{
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 45px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d3a200;
+}
+.download-btn:hover{
+  background-color: #ac8400;
+  cursor: pointer;
+}
+.horizontal-line{
+  margin-top: -12px;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.212);
+}
+.hori-line{
+  margin-top: 5px;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.212);
+}
+.ann-row{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.posted-ann h2{
+  font-size: 29px;
+}
+.posted-ann p{
+  font-size: 18px;
+}
+.the-faq{
+  margin-left: 20px;
+}
+.wrapper{
+  max-width: 600px;
+  padding: 0 20px;
+  width: 90%;
+}
+.wrapper .parent-tab{
+  margin-bottom: 8px;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.wrapper .parent-tab label{
+background: #100550;
+padding: 10px 20px;
+align-items: center;
+display: flex;
+justify-content: space-around;
+cursor: pointer;
+border-radius: 2px;
+position: relative;
+z-index: 99;
+
+}
+.wrapper label span{
+ color: #fff;
+ font-size: 18px;
+ font-weight: 500;
+ text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper label .icon{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  display: block;
+
+}
+ .parent-tab input:checked ~ label .icon i:before{
+  content:  '\f068';
+}
+.wrapper label .icon i{
+  position: absolute;
+  top: 50%;
+  font-size: 22px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.wrapper .parent-tab .content{
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.4s ease ;
+}
+.parent-tab input:checked ~ .content{
+ max-height: 100vh;
+}
+.wrapper .parent-tab .content p{
+ font-size: 16px;
+ padding: 15px 20px;
+}
+.wrapper input{
+  display: none;
+}
+
+}
+
