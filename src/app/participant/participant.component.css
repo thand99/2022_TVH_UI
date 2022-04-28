@@ -73,13 +73,6 @@ table {
 }
 .demo-button-container {
     position: absolute;
-    padding-top: 50px;
-    left: 30%;
-}
-.mat-card-title{
-    color:blue;
-    position: absolute;
-    left:21%;
-    padding-top: 60px;
-    font-size: 20px;
+    padding-top: 20px;
+    right: 10%;
 }
