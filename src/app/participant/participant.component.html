@@ -1,53 +1,49 @@
-<app-sidebar></app-sidebar>                             
+<app-sidebar></app-sidebar>                                
+  
+<mat-divider></mat-divider>
 
-<mat-card>
-      <mat-card-title>Add Lead</mat-card-title>
-      <div class="demo-button-container">
-        <button mat-raised-button (click)="openDialog()" class="demo-button"> Add data</button>
-      </div>
+<div class="demo-button-container">
+    <button mat-raised-button (click)="openDialog()" class="demo-button">
+      Add data
+    </button>
+</div>
 
-    <div class="table-data" >
-        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
-            
-            <ng-container matColumnDef="no">
-              <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.no}} </mat-cell>
-            </ng-container>
+<div class="table-data" >
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
         
-            <ng-container matColumnDef="name">
-              <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-            </ng-container>
+        <ng-container matColumnDef="no">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.no}} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
 
-            <ng-container matColumnDef="surname">
-                <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="image">
-              <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.image}} </mat-cell>
-            </ng-container>
+        <ng-container matColumnDef="surname">
+            <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
+          </ng-container>
       
-            <ng-container matColumnDef="category">
-              <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
-            </ng-container>
-          
-          
-            <ng-container matColumnDef="description">
-              <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
-            </ng-container>
+        
+        <ng-container matColumnDef="category">
+          <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+        </ng-container>
 
-            <ng-container matColumnDef="action">
-                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
-                <mat-cell *matCellDef> <button mat-raised-button class="button"> Edit </button> </mat-cell>
-                <mat-cell *matCellDef> <button mat-raised-button class="button"> Delete </button> </mat-cell>
-            </ng-container>
-          
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-        </table>
-    </div>
-  </mat-card>
+        <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.action}} </mat-cell>
+          </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </table>
+</div>

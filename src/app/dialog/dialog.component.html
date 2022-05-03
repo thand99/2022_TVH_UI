@@ -1,38 +1,36 @@
-<form [formGroup]="formValue"> 
-  <h1 mat-dialog-title>Add Lead Team Player</h1>
-  <div mat-dialog-content>
-      <mat-form-field appearance="outline">
-        <mat-label>First Name</mat-label>
-          <input formControlName="name" matInput placeholder="Name">
-      </mat-form-field>
+<h1 mat-dialog-title>Add Lead Team Player</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+        <input matInput placeholder="Name">
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Surname</mat-label>
-        <input formControlName="surname" matInput placeholder="Surname">
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Surname</mat-label>
+      <input matInput placeholder="Surname">
+    </mat-form-field>
 
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label >Category</mat-label>
-        <mat-select formControlName="category">
-        <mat-option value="one">Lead Organizing Team</mat-option>
-        <mat-option value="two">Industry Volunteers</mat-option>
-        <mat-option value="two">Organizing Team</mat-option>
-        </mat-select>        
-      </mat-form-field>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label >Category</mat-label>
+      <mat-select>
+      <mat-option value="one">Lead Organizing Team</mat-option>
+      <mat-option value="two">Industry Volunteers</mat-option>
+      <mat-option value="two">Organizing Team</mat-option>
+      </mat-select>        
+    </mat-form-field>
 
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Description</mat-label>
-        <textarea class="description" formControlName="description" matInput></textarea>
-      </mat-form-field>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea class="description" matInput></textarea>
+    </mat-form-field>
 
-      <div class="file">
-        <h2>File Upload</h2>
-        <input type="file" formControlName="file_name"> 
-      </div>
+    <div class="file">
+      <h2>File Upload</h2>
+      <input type="file"> 
+    </div>
 
-      <div>
-        <button mat-raised-button color="primary"  data-bs-dismiss>Close</button>
-        <button mat-raised-button color="primary" (click)="postLeaderDetails()">Add</button>
-      </div>
-  </div>
-</form>
+    <div>
+      <button mat-raised-button color="primary">Submit</button>
+    </div>
+   
+</div>

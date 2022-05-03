@@ -1,16 +1,14 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { DialogComponent } from '../dialog/dialog.component';
 
 
-
 export interface PeriodicElement {
   position: number;
   name: string;
   surname: string;
-  image: string;
   category: string;
   description: string;
   action:string;
@@ -25,9 +23,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './participant.component.html',
   styleUrls: ['./participant.component.css']
 })
-export class ParticipantComponent implements OnInit {
+export class ParticipantComponent {
+
   selectedFile!: File;
-  displayedColumns: string[] = ['no', 'name', 'image', 'surname', 'category', 'description', 'action'];
+  displayedColumns: string[] = ['no', 'name', 'surname', 'category', 'description', 'action'];
   dataSource = [...ELEMENT_DATA];
 
 
@@ -42,10 +41,6 @@ export class ParticipantComponent implements OnInit {
 
 
   constructor(private http: HttpClient, public dialog: MatDialog) {}
-  
-  ngOnInit(): void {
-   
-  }
 
   openDialog() {
       this.dialog.open(DialogComponent, {
