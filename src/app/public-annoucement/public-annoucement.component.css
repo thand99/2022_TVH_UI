@@ -15,7 +15,7 @@
 }
 nav img{
   width: 70px;
-  margin-left: -230px;
+  margin-left: -180px;
   margin-top: 5px;
 }
 .nav-links ul{
@@ -34,7 +34,7 @@ nav img{
   color: #003782;
   margin-top: 15px;
   position: relative;
-  left: -12%;
+  left: -8%;
 }
 .nav-links ul li a{
     text-decoration: none;
@@ -120,7 +120,7 @@ nav img{
   margin-left: 20px;
 }
 .wrapper{
-  max-width: 600px;
+  max-width: 1500px;
   padding: 0 20px;
   width: 90%;
 }
