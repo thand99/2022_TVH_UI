@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,10 +6,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   templateUrl: './participant.component.html',
   styleUrls: ['./participant.component.css']
 })
+
 export class ParticipantComponent implements OnInit {
-
-  
-
 
   constructor() {}
   
@@ -20,7 +18,6 @@ export class ParticipantComponent implements OnInit {
 
   
 
- 
 
     
 

@@ -14,8 +14,8 @@ export class TeamComponent {
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-      width: '30%',
-      height: '60%'
+      width: '40%',
+      height: '80%'
     });
   }
 
