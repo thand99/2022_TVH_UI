@@ -23,6 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PublicAnnoucementComponent } from './public-annoucement/public-annoucement.component';
 import { LayoutComponent } from './layout/layout.component';
+import { TeamComponent } from './team/team.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -45,14 +47,13 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 import { CKEditorModule } from 'ng2-ckeditor';
 import { A11yModule } from '@angular/cdk/a11y';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent,
     AboutComponent,
     HomeComponent,
     RewardsComponent,
@@ -68,7 +69,9 @@ import { DialogComponent } from './dialog/dialog.component';
     DashboardComponent,
     RewardComponent,
     SidebarComponent,
-    PublicAnnoucementComponent
+    PublicAnnoucementComponent,
+    TeamComponent,
+    DialogComponent
 
   ],
   imports: [

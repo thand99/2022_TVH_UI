@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -18,11 +19,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
  
 ];
 
+=======
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+
+>>>>>>> Stashed changes
 @Component({
   selector: 'app-participant',
   templateUrl: './participant.component.html',
   styleUrls: ['./participant.component.css']
 })
+<<<<<<< Updated upstream
 export class ParticipantComponent {
 
   selectedFile!: File;
@@ -32,26 +39,27 @@ export class ParticipantComponent {
 
   @ViewChild(MatTable)
   table!: MatTable<PeriodicElement>;
+=======
+export class ParticipantComponent implements OnInit {
+>>>>>>> Stashed changes
 
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataSource.push(ELEMENT_DATA[randomElementIndex]);
-    this.table.renderRows();
-  }
+  
 
 
+<<<<<<< Updated upstream
   constructor(private http: HttpClient, public dialog: MatDialog) {}
+=======
+  constructor() {}
+  
+  ngOnInit(): void {
+   
+  }
+  
 
-  openDialog() {
-      this.dialog.open(DialogComponent, {
-      
-    });
-  }
+  
+>>>>>>> Stashed changes
+
  
-  onFileSelected(event: any)
-  {
-    this.selectedFile = <File>event.target.files[0];
-  }
 
     
 
