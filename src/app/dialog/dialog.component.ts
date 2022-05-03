@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< Updated upstream
-=======
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-dialog',
@@ -10,14 +7,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-<<<<<<< Updated upstream
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-=======
   
   leaderForm !: FormGroup;
 
@@ -37,5 +26,4 @@ export class DialogComponent implements OnInit {
    addLeader(){
      console.log(this.leaderForm.value);
    }
->>>>>>> Stashed changes
 }
