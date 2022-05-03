@@ -7,6 +7,8 @@
 .nav-links{
   flex: 1;
   text-align: right;
+  margin-top: 80px;
+  margin-right:30px;
 }
 .nav-links ul li{
   list-style: none;
@@ -17,7 +19,7 @@
 .nav-links ul li a{
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Arial;
   transition: 1s;
 }
@@ -25,7 +27,7 @@
   color: #c7c7c7;
 }
 p{
-  font-size: px;
+  font-size: 16px;
   color: #fff;
   margin-left: -10px;
 }
@@ -35,6 +37,6 @@ p{
 }
 
 footer{
-  background-color: rgb(27, 0, 177);
-  height: 160px;
+  background-color: #003782;
+  height: 200px;
 }

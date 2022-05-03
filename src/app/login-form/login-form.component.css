@@ -1,4 +1,4 @@
-@media (max-width:1400px){
+@media (min-width:1366px){
 *{
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ body{
 
 .login-word{
   height: 50px;
-  background: #0059ff;
+  background: #003782;
 }
 .login-word h1{
   padding: 10px;
@@ -37,7 +37,7 @@ body{
 .input-box{
   margin: 31px auto;
   width: 80%;
-  border: 1px solid #0059ff;
+  border: 1px solid #003782;
   outline: none;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -64,13 +64,13 @@ body{
   padding: 10px 0;
   border:none;
   cursor: pointer;
-  background: #0059ff;
+  background: #003782;
   color:#fff;
   font-size: 15px;
   transition: .6s ease-in;
 }
 .login-btn:hover{
-  box-shadow: 0 0 10px #000;
+  background-color: #023174;
  }
 
 }
@@ -100,7 +100,7 @@ body{
 }
 .login-word{
   height: 50px;
-  background: #0059ff;
+  background: #003782;
 }
 .login-word h1{
   padding: 10px;
@@ -113,7 +113,7 @@ body{
 .input-box{
   margin: 31px auto;
   width: 80%;
-  border: 1px solid #0059ff;
+  border: 1px solid #003782;
   padding-top: 10px;
   padding-bottom: 5px;
 }
@@ -142,13 +142,13 @@ body{
   padding: 10px 0;
   border:none;
   cursor: pointer;
-  background: #0059ff;
+  background: #003782;
   color:#fff;
   font-size: 15px;
   transition: .6s ease-in;
 }
 .login-btn:hover{
- box-shadow: 0 0 10px #000;
+  background-color: #023174;
 }
 
 }
