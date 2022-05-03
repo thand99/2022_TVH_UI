@@ -4,6 +4,62 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "Nhlaka",
+      "surname": "Makhaza",
+      "image": "C:\\fakepath\\Screenshot (6).png",
+      "category": "two",
+      "description": "lead organizer jhcdejksfffffffffdkkssnnnnnnhfyeghsnnbvghwtyeyeteteteegdgdgdggdggdgd"
+    },
+    {
+      "id": 3,
+      "name": "Nhlaka",
+      "surname": "Makhaza",
+      "image": "C:\\fakepath\\Screenshot (7).png",
+      "category": "two",
+      "description": "kkkkkkkkkkkkkkkkkkkdjjjjjjjjjjjjjjjjjjjjjjjjfhhhhhhhhhhhhhhhhhhhhhhhhhr"
+    },
+    {
+      "id": 4,
+      "name": "Nhlaka",
+      "surname": "Makhaza",
+      "image": "C:\\fakepath\\Screenshot (7).png",
+      "category": "two",
+      "description": "sjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjccccccccccccccccccchhhhhhhhhhhhhhhhhhhhhhhhh"
+    },
+    {
+      "id": 5,
+      "name": "Nhlaka",
+      "surname": "Makhaza",
+      "image": "C:\\fakepath\\Screenshot (7).png",
+      "category": "",
+      "description": "jfffffffffffffffffffffffffffg"
+    },
+    {
+      "id": 6,
+      "name": "Sandile",
+      "surname": "Mchunu",
+      "image": "C:\\fakepath\\Screenshot (1).png",
+      "category": null,
+      "description": "flkjgggj"
+    },
+    {
+      "id": 7,
+      "name": "Sa",
+      "surname": "Makhaza",
+      "image": "C:\\fakepath\\Screenshot (4).png",
+      "category": "",
+      "description": "hfjfkf"
+    },
+    {
+      "id": 8,
+      "name": "Zakhele",
+      "surname": "Mdlalose",
+      "image": "C:\\fakepath\\Screenshot (12).png",
+      "category": "Lead Organizing Team",
+      "description": "hjdhdhgf"
     }
   ],
   "comments": [
